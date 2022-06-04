@@ -1,0 +1,240 @@
+%Matteo Kumar - Leonard Schatt
+% Fortgeschrittenes Physikalisches Praktikum
+
+% Teilauswertung SE
+
+\section{Spektrale Empfindlichkeit}
+\subsection{Lock-in-Verstärker}
+Um den Photostrom $I_{Ph}$ zu berechnen, muss zunächst die am Lock-in-Verstärker abgelesene Spannung in die tatsächlich anliegende Spannung umgerechnet werden. Der Verstärker hat als Output einen Wert zwischen $0$V und $10$V. Berücksichtigt man noch die Sensitivity des Verstärkers erhält man für die anliegende Spannung $U_{rms}$: \\
+
+\begin{equation}
+U_{rms} = \frac{U_{angezeigt}}{10V} \cdot Sensitivity
+\end{equation}
+
+Nun muss noch berücksichtigt werden, dass der Lock-in-Verstärker das Messsignal, das durch den Chopper (annähernd) reckteckförmig moduliert wurde, mit dem sinusförmigen Referenzsignal des Choppers faltet, bevor die Faltung durch einen Tiefpass geleitet wird. Ein Rechtecksignal kann geschrieben werden als:\\
+
+\begin{equation}
+f_{Rechteck} = \frac{4U_{Rechteck}}{\pi} \sum_{k=1}^\infty \frac{sin((2k-1)\omega t)}{2k-1}  ,
+\end{equation}
+
+wobei $U_{Rechteck}$ die Amplitude des Signals bezeichnet.
+Faltet man dieses nun mit einem Signal der Frequenz $\omega$, so trägt nach durchlaufen des Tiefpasses nur der Anteil am Rechtecksignal mit ebenfalls $\omega$ bei, also der Term für $k = 1$. Die gemessene Spannung ergibt sich also zu: \\
+
+\begin{align}
+U_{ein} &= \frac{4U_{Rechteck}}{\pi} sin(\omega t) \nonumber \\ 
+\implies U_{rms} &= \frac{1}{\sqrt{2}} \frac{4U_{Rechteck}}{\pi}
+\end{align}
+
+Stellt man nun nach der Amplitude der Spannung $U_{Rechteck}$ um, so erhält man:
+
+\begin{align}
+U_{Rechteck} &= \frac{\pi \sqrt{2}}{4} U_{rms} \\
+\implies U_{Rechteck} &= \frac{\pi \sqrt{2}}{4} \cdot Sensitivity \cdot \frac{U_{angezeigt}}{10V}
+\end{align}
+
+Um den Photostrom $I_{Ph}$ zu erhalten, muss jetzt nur noch die tatsächliche Spannung mithilfe des Faktors des U/I-Verstärkers umgerechnet werden:\\
+
+\begin{align}
+I_{Ph} &= \frac{U_{Rechteck}}{1 \frac{kV}{A}} \nonumber \\
+ &= \frac{\pi \sqrt{2}}{4} \cdot Sensitivity \cdot \frac{U_{angezeigt}}{10000 \frac{V^2}{A}}
+\label{eq:IPh}
+\end{align}
+
+
+\subsection{Spektrale Empfindlichkeit SR und Externe Quanteneffizienz EQE}
+
+Die Spekrtale Empfindlichkeit $SR$ berechnet sich nach:
+\begin{equation}
+SR = \frac{I_{Ph}}{P_\lambda},
+\end{equation}
+
+mit Photostrom $I_{Ph}$ aus Gl. \ref{eq:IPh}. Dabei muss noch berücksichtigt werden, dass für alle Messwerte noch der Photostrom aus der
+Untergrundsmessung abgezogen wird. \\
+Die in die Zelle einfallende Leistung $P_{\lambda}$ muss erst noch aus der in das Powermeter einfallende Leistung berechnet werden. Es gilt:
+\begin{align}
+P_{PM} &= P_{ges} R \nonumber \\
+P_{\lambda} &= P_{ges} T \nonumber \\
+\implies P_{\lambda} &= P_{PM} \frac{T}{R},
+\end{align}
+
+mit Reflektionskoeffizient des Strahlteilers $R$, Transmissionskoeffizient $T$ und gesamter Lichtleistung vor Auftreffen auf den Teiler $P_{ges}$.
+Für die Werte von $\frac{T}{R}$ wurden die Inversen von Abschätzungen der Werte $\frac{R}{T}$ aus Anhang $A.2$ des Versuchsskriptes benutzt. Bei der 
+Berechnung der einfallenden Leistung muss für das CIS-Modul noch ein Faktor $\frac{1}{11}$ berücksichtigt werden, da das Modul aus 11 
+einzelnen Zellen besteht und die Leistung sich demnach auf diese näherungsweise gleichmäßig aufteilt (tatsächlich wohl eher ungleichmäßig, 
+je nach Positionierung der Zelle im Strahl, dennoch soll dies zur Vereinfachung der Rechnung angenommen werden). Der Photostrom bleibt 
+allerdings gleich dem gemessenen, da die Zellen in Reihe geschalten sind.
+
+Aus den Werten für $SR$ lassen sich nun auch die für die Externe Quanteneffizienz $EQE$ berechnen:
+\begin{align}
+EQE &= \frac{hc}{e} \frac{SR}{\lambda}
+\label{eq:eqe}
+\end{align}
+
+Die berechneten Werte finden sich in Tab. \ref{tab:32mono} - \ref{tab:32cis} wieder. Die Messdaten können dem Protokoll entnommen werden.
+\\
+
+\begin{center}
+%\captionof{table}{Berechnete Werte für die monokristalline Siliziumzelle}
+\begin{tabular}{rrrrrr}
+    $Wellenlänge (nm)$ &  $I_{Ph} (A)$ &    $\frac{T}{R}$ &  $P_{ges} (\mu W)$ &  $SE (\frac{A}{W})$ &       $EQE$ \\
+    \hline
+    363.2 &  0.000020 &  1.2262 &   38.4752 &  0.5133 &   1.7524 \\
+    400.3 &  0.000067 &  1.2239 &   58.9220 &  1.1399 &   3.5307 \\
+    450.8 &  0.000184 &  1.2254 &  100.4496 &  1.8363 &   5.0505 \\
+    499.2 &  0.000281 &  1.2004 &  127.3657 &  2.2043 &   5.4748 \\
+    599.1 &  0.000495 &  1.1806 &  179.2252 &  2.7595 &   5.7108 \\
+    699.9 &  0.000563 &  1.1587 &  170.7877 &  3.2990 &   5.8441 \\
+    799.5 &  0.000516 &  1.1876 &  127.0578 &  4.0586 &   6.2939 \\
+    899.8 &  0.000781 &  1.1402 &  187.9411 &  4.1563 &     5.727 \\
+    949.4 &  0.000830 &  1.0604 &  217.9273 &  3.8086 &   4.9738 \\
+    1000.5 &  0.000809 &  1.0438 &  229.8242 &  3.5196 &   4.3616 \\
+    1051.2 &  0.000429 &  1.0373 &  165.3260 &  2.5951 &   3.0608 \\
+    1099.6 &  0.000103 &  1.0395 &   78.3356 &  1.3154 &    1.4832 \\
+    1123.3 &  0.000065 &  1.0411 &   77.2530 &  0.8421 &  0.9295 \\
+\end{tabular}
+\captionof{table}{Berechnete Werte für die monokristalline Siliziumzelle}
+\label{tab:32mono}
+\end{center}
+
+\begin{center}
+\begin{tabular}{rrrrrr}
+    $Wellenlänge (nm)$ &  $I_{Ph} (A)$ &    $\frac{T}{R}$ &  $P_{ges} (\mu W)$ &  $SE (\frac{A}{W})$ &       $EQE$ \\
+    \hline
+    363.2 &  0.000014 &  1.2262 &   36.7138 &  0.3700 &   1.2633 \\
+    400.3 &  0.000050 &  1.2239 &   56.1850 &  0.8983 &   2.7824 \\
+    450.8 &  0.000154 &  1.2254 &   95.6352 &  1.6078 &   4.4222 \\
+    499.2 &  0.000261 &  1.2004 &  121.3681 &  2.1492 &   5.3378 \\
+    599.1 &  0.000449 &  1.1806 &  170.5858 &  2.6295 &   5.4417 \\
+    699.9 &  0.000502 &  1.1587 &  161.7262 &  3.1032 &   5.4972 \\
+    799.5 &  0.000439 &  1.1876 &  119.7324 &  3.6628 &   5.6802 \\
+    899.8 &  0.000556 &  1.1402 &  162.0696 &  3.4324 &   4.7296 \\
+    949.4 &  0.000543 &  1.0604 &  190.2974 &  2.8532 &   3.7261 \\
+    1000.5 &  0.000551 &  1.0438 &  240.2664 &  2.2922 &   2.8405 \\
+    1051.2 &  0.000208 &  1.0373 &  167.2540 &  1.2421 &   1.4650 \\
+    1099.6 &  0.000038 &  1.0395 &   79.4034 &  0.4734 &  0.5337 \\
+    1123.3 &  0.000019 &  1.0411 &   77.8485 &  0.2498 &  0.2757 \\
+\end{tabular}
+\captionof{table}{Berechnete Werte für die multikristalline Siliziumzelle}
+\label{tab:32multi}
+\end{center}
+
+\begin{center}
+\begin{tabular}{rrrrrr}
+    $Wellenlänge (nm)$ &  $I_{Ph} (A)$ &    $\frac{T}{R}$ &  $P_{ges} (\mu W)$ &  $SE (\frac{A}{W})$ &       $EQE$ \\
+    \hline
+    363.2 &  3.0544e-07 &  1.2262 &    36.2897 &  0.0084 &  0.02873 \\
+    400.3 &  4.2807e-06 &  1.2239 &    55.7030 &  0.0768 &   0.2380 \\
+    450.8 &  1.5210e-05 &  1.2254 &    95.2272 &  0.1597 &   0.4392 \\
+    499.2 &  2.2674e-05 &  1.2004 &   120.7850 &  0.1877 &   0.4662 \\
+    599.1 &  4.0856e-05 &  1.1806 &   170.2470 &  0.2399 &   0.4966 \\
+    699.9 &  4.5299e-05 &  1.1587 &   162.6755 &  0.2784 &   0.4932 \\
+    799.5 &  4.0523e-05 &  1.1876 &   121.3322 &  0.3339 &    0.5179 \\
+    899.8 &  5.5740e-05 &  1.1402 &   172.8567 &  0.3224 &   0.4443 \\
+    949.4 &  5.6406e-05 &  1.0604 &   198.9730 &  0.2834 &   0.3702 \\
+    1000.5 &  6.1738e-05 &  1.0438 &   236.7218 &  0.2608 &   0.3231 \\
+    1051.2 &  3.7635e-05 &  1.0373 &   166.9648 &  0.2254 &   0.2658 \\
+    1099.6 &  1.3477e-05 &  1.0395 &    79.1822 &  0.1702 &   0.1919 \\
+    1123.3 &  1.0911e-05 &  1.0411 &    77.7044 &  0.1404 &   0.1549 \\
+\end{tabular}
+\captionof{table}{Berechnete Werte für das CIS-Modul}
+\label{tab:32cis}
+\end{center}
+
+Die Lage der Bandkanten sind für Silizium $1,1242$eV 
+(\url{https://www.pveducation.org/pvcdrom/materials/general-properties-of-silicon}, Stand: 9.9.21) und für CIS $1,02$eV 
+(\url{https://www.pveducation.org/pvcdrom/materials/cuinse2}, Stand: 9.9.21). Die Lage dieser im Wellenängenraum berechnet sich nach: \\
+
+\begin{align}
+\lambda_{Bandkante} &= \frac{hc}{E_{Bandkante}}
+\end{align}
+
+Daraus folgt: \\
+
+\begin{equation}
+\lambda_{Si} = 1102,866 nm, \qquad \lambda_{CIS} = 1215,531 nm
+\label{eq:bandkante}
+\end{equation}
+
+In den folgenden Abbildungen \ref{bild:SRall} und \ref{bild:allEQE} wurden die spektrale Empfindlichkeit und die externe 
+Quanteneffizienz gegen die Wellenlänge aufgetragen.
+Dabei wurden auch die jeweiligen Bandkanten aus Gl. \ref{eq:bandkante} eingezeichnet.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.75]{Bilder/32allSRverb.png}
+    \caption{Verlauf der gemessenen Werte von $SR$ der verschiedenen Zellen aufgetragen gegen die Wellenlänge}
+    \label{bild:SRall}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.75]{Bilder/32allEQEverb.png}
+    \caption{Verlauf der gemessenen Werte von $EQE$ der verschiededen Zellen aufgetragen gegen die Wellenlänge}
+    \label{bild:allEQE}
+\end{figure}
+
+\clearpage
+
+Bei den Siliziummodulen ist zu erkennen, dass sich trotz 
+Überschreitung der Bandkante dennoch eine endliche spektrale Empfindlichkeit aus den Messungen ergibt. 
+%Dies ist auch nicht alleine durch die Driftleistung des Powermeters zu erklären, da diese im Nanowatt-Bereich liegen. 
+Die Bandkante des CIS-Moduls liegt bei einer höheren Wellenlänge als der Messpunkt der größten Wellenlänge, deshalb kann nicht mit 
+Sicherheit gesagt werden, ob das Problem des Überschreitens der Bandkante hier auch auftreten würde. Dennoch lässt sich an Abb. 
+\ref{bild:32allSRverb} gut erkennen, dass die Lage der Bandkante annäherungsweise mit dem Nulldurchgang des Graphen der spektralen Empfindlichkeit
+übereinstimmt. Als Erklärung, dass hinter der Bandkante noch Messwerte vorliegen, können Messfehler dienen. Allerdings ist die 
+Überschreitung nicht sehr groß, daher kann auch eine Abweichung der realen Solarzelle vom Bändermodell die Ursache sein. \\
+
+
+Als Anhaltspunkt zum Vergleich sollen die Abb. \ref{bild:ThSR} und \ref{bild:ThEQE} dienen, in denen $SR$ und $EQE$ für eine multikristalline Solarzelle 
+gegen die Wellenlänge aufgetragen ist. Es ist gut zu erkennen, dass die Form des Verlaufs mit den gemessenen Kurven übereinstimmt. Im 
+Vergleichsgraphen werden zwar deutlich höhere Werte für $SR$ und $EQE$ erreicht, es ist aber anzunehmen, dass der Idealitätsfaktor $n$ 
+der dort in präzisen Labormessungen verwendeten Zellen deutlich besser war und dass infolgedessen die Ausbeute höher war.
+Aber auch in diesen Messungen ist deutlich zu sehen, dass die Bandkante bei $\lambda = 1102,866 nm$ deutlich überschritten wird. Somit
+kann das Überschreiten in unserer Messung wahrscheinlich auf die Abweichungen der realen Zelle im Bändermodell zurückgeführt werden.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.75]{Bilder/TheorieSR.png}
+    \caption{Vergleichsdaten für den Verlauf von $SR$ einer multikristallinen Siliziumzelle \protect \footnotemark}
+    \label{bild:ThSR}
+\end{figure}
+
+\footnotetext{\cite{Shah2020}, S.68}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.75]{Bilder/TheorieEQE.png}
+    \caption{Vergleichsdaten für den Verlauf von $EQE$ einer multikristallinen Siliziumzelle \protect \footnotemark}
+    \label{bild:ThEQE}
+\end{figure}
+
+\footnotetext{\cite{Shah2020}, S.68}
+
+
+\clearpage
+\subsection{Ideale Externe Quanteneffizienz}
+
+Nimmt man nun eine ideale externe Quanteneffizienz von $1$ an, folgt aus Gl. \ref{eq:eqe}:
+\begin{align}
+SR &= \frac{e}{hc}\lambda
+\end{align}
+
+Der Graph der spektralen Empfindlichkeit ist somit zunächst eine Gerade mit Steigung $\frac{e}{hc}$, bis diese Gerade auf die
+Vertikale der bandkante trifft. Da nach Überschreitung der Bandkante kein Stromfluss mehr möglich ist (höhere Wellenlänge 
+$\leftrightarrow$ niedrigere Energie), fällt die Gerade dort abrupt ab. Der Verlauf ist in Abb. \ref{bild:idealEQE} zu sehen.
+Hierbei ist der Verlauf beider Modularten erst die rote Ursprungsgerade, die dann im Fall der Siliziumzellen mit der violetten
+Vertikalen, im Fall des CIS-Moduls mit der roten Vertikalen abfallen.
+Hier wird 
+nochmals klar, dass die Werte der Siliziumzellen für $SR$ nicht stimmen können, da sie besser als der Idealverlauf wären.
+Betrachtet man die Graphen der Messwerte wird klar, dass die verwendeten Zellen fern von einem Ideal sind. Dieser Umstand soll in der
+nächsten Teilaufgabe weiter vertieft werden, wenn der Idealitätsfaktor bestimmt wird.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.75]{Bilder/32idealEQE.png}
+    \caption{Verlauf von $SR$ bei einer idealen $EQE = 1$; der Graph für die Si-Zellen fällt mit der violetten Vertikalen ab, der für
+    das CIS-Modul mit der roten. Zum Vergleich die Messwerte für $SR$ (Si-Zellen um Faktor 10 gestaucht)}
+    \label{bild:idealEQEverb}
+\end{figure}
+

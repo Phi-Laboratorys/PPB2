@@ -1,0 +1,82 @@
+\section{Vergleich der Verhältnisse der gemessenen Schwingungsfrequenzen mit theoretisch zu erwartenden Werten}
+Für die theoretische Schwingungsfrequenz gilt folgende Formel \citep[vgl.][]{Schwingungsfrequenz}:
+\begin{equation}
+    \nu=\frac{1}{2\pi}\sqrt{\frac{k}{\mu}}
+\end{equation}
+Hierbei steht $k$ die Federkonstante zwischen den Kohlenstoffatom und dem Schwingungspartner.\\
+$\mu$ steht für die reduzierte Masse, welche wie folgt definiert ist:
+\begin{align}
+    \mu =\frac{m_1\cdot m_2}{m_1+m_2}
+\end{align}
+Für das Verhältnis von zwei Schwingungen (mit gleicher Federkonstante) gilt:
+\begin{equation}
+    \frac{\nu_1}{\nu_2}=\sqrt{\frac{\mu_2}{\mu_1}}=\frac{\tilde{\nu}_1}{\tilde{\nu}_2}
+\end{equation}
+Wir wollen nun die Schwingungsfrequenzen (bzw. Wellenzahlen) von Molekülen vergleichen, bei denen je eine Atomart ausgetauscht wurde.
+Es werden hier der Unterschied zwischen den Schwingungen $CHCl_3$ und $CDCl_3$ \& $CHCl_3$ und $CHBr_3$ angeschaut.
+Mit den Massen der einzelnen Atome (Chlor, Wasserstoff, Deuterium, Kohlenstoff) wurden folgende reduzierte Massen berechnet \citep[vgl.][]{Massen}:
+\begin{align}
+    \mu_{C-H}&=0,92974\,\text{u}\\
+    \mu_{C-D}&=1,72464\,\text{u}\\
+    \mu_{C-Br}&=10,4162\,\text{u}\\
+    \mu_{C-Cl}&=8,93414\,\text{u}
+\end{align}
+Für die theoretischen Schwingungsfrequenzen folgt nun:
+\begin{align}
+    \frac{\tilde{\nu}_{C-H}}{\tilde{\nu}_{C-D}}&=1,362\\
+    \frac{\tilde{\nu}_{C-Cl}}{\tilde{\nu}_{C-Br}}&=1,079762594
+\end{align}
+Um nun das Verhältnis unserer gemessenen Werte zu berechnen, werden die jeweils gemessenen Wellenzahlen für $0^\circ$-Polarisation, $90^\circ$-Polarisation, Stokes- und Anti-Stokes-Linie gemittelt und anschließend dann das Verhältnis bestimmt.\\
+Somit erhält man beim Vergleich von $CHCl_3$ zu $CDCl_3$:
+\begin{table}[h]
+    \centering\begin{tabular}{c|c|c}
+        $\tilde{\nu}_{CHCl_3}$ (cm$^{-1}$) & $\tilde{\nu}_{CDCl_3}$ (cm$^{-1}$) & $\tilde{\nu}_{CHCl_3}/\tilde{\nu}_{CDCl_3}$\\\hline
+        $262,43\pm3,2$ &$258,73\pm3,2$&$1,014\pm0,018$\\
+        $363,45\pm3,2$ &$362,80\pm3,2$&$1,002\pm0,012$\\
+        $668,70\pm2,8$ &$651,87\pm2,8$&$1,026\pm0,006$\\
+        $763,20\pm2,8$ &$745,95\pm2,3$&$1,023\pm0,005$\\
+        $1219,57\pm2,8$&$922,60\pm2,8$&$1,322\pm0,005$%\\
+        %3018,9&2250,0&1,342
+    \end{tabular}
+    \caption{Verhältnis der gemessenen Werte von $CHCL_3$ zu $CDCL_3$}
+\end{table}\newpage
+Und beim Vergleich von $CHCl_3$ zu $CHBr_3$:
+\begin{table}[h]
+    \centering\begin{tabular}{c|c|c}
+        $\tilde{\nu}_{CHCl_3}$ (cm$^{-1}$) & $\tilde{\nu}_{CHBr_3}$ (cm$^{-1}$) & $\tilde{\nu}_{CHCl_3}/\tilde{\nu}_{CHBr_3}$\\\hline
+        $262,43\pm3,2$ &$154,63\pm3,2$&$1,697\pm0,041$\\
+        $363,45\pm3,2$ &$221,53\pm3,2$&$1,641\pm0,028$\\
+        $668,70\pm2,8$ &$541,10\pm2,8$&$1,236\pm0,008$\\
+        $763,20\pm2,8$ &$655,90\pm2,8$&$1,164\pm0,007$\\
+        $1219,57\pm2,8$&$1138,90\pm2,3$&$1,071\pm0,003$
+    \end{tabular}
+    \caption{Verhältnis der gemessenen Werte von $CHCl_3$ zu $CHBr_3$}
+\end{table}\\
+Für die Literaturwerte folgt:
+\begin{table}[h]
+    \centering\begin{tabular}{c|c|c}
+        $\tilde{\nu}_{{CHCl_3}_l}$ (cm$^{-1}$) & $\tilde{\nu}_{{CDCl_3}_l}$ (cm$^{-1}$) & $\tilde{\nu}_{{CHCl_3}_l}/\tilde{\nu}_{{CDCl_3}_l}$\\\hline
+        260,0&262,0&0,992\\
+        365,9&366,5&0,998\\
+        668,3&650,8&1,027\\
+        761,2&737,6&1,032\\
+        1215,6&908,3&1,338\\
+        3018,9&2250,0&1,342
+    \end{tabular}
+    \caption{Verhältnis der aus der Literatur entnommen Werte}
+\end{table}
+\begin{table}[h]
+    \centering\begin{tabular}{c|c|c}
+        $\tilde{\nu}_{{CHCl_3}_l}$ (cm$^{-1}$) & $\tilde{\nu}_{{CHBr_3}_l}$ (cm$^{-1}$) & $\tilde{\nu}_{{CHCl_3}_l}/\tilde{\nu}_{{CHBr_3}_l}$\\\hline
+        260,0&153,8&1,691\\
+        365,9&222,3&1,646\\
+        668,3&538,5&1,241\\
+        761,2&656,0&1,160\\
+        1215,6&1142,0&1,064\\
+        3018,9&3023,0&0,999
+    \end{tabular}
+    \caption{Verhältnis der aus der Literatur entnommen Werte}
+\end{table}\\
+Die gemessenen Werte für das Verhältnis passen mit den Literaturwerten überein.
+Für beide Messreihen gilt, je größer die Wellenzahl ist, desto genauer ist man an dem theoretischen Verhältnis der Frequenz dran.
+Beim Vergleich zwischen $CHCl_3$ und $CDCl_3$ steigt das Verhältnis der Wellenzahlen an und beim Vergleich zwischen $CHCl_3$ und $CHBr_3$ fällt dieses ab.

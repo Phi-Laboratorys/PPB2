@@ -1,0 +1,175 @@
+% Charlotte Geiger - Manuel Lippert - Leonard Schatt
+% Physikalisches Praktikum
+
+% 3.Kapitel  Protokoll
+
+% Variables
+\def\skalierung{0.65}
+
+\chapter{Messprotokoll}
+\label{chap:protokoll}
+
+Für jede Aufnahme werden im Folgenden die Einstellungen des Mikroskops dokumentiert.
+
+\section{a. Einpfennig- bzw. Eincentstücke mit Bohrungen}
+
+\subsection{Aufnahme 1: Lorem ipsum...}
+
+\paragraph{Bemerkungen:}
+\begin{center}
+    \begin{tabular}{|l|r|}
+    \hline
+     Dateiname &  \\
+     \hline
+        
+    \end{tabular} 
+ \end{center}
+
+\paragraph{Einstellungen:}
+
+\begin{center}
+   \begin{tabular}{l|r}
+    \rowcolor{lightgray}\textbf{Parameter} & \textbf{Eingestellter Wert} \\
+    \hline\hline
+    Vergrößerung &  \\
+    \hline
+    Arbeitsabstand (WD) & \\
+    \hline
+    Strahldurchmesser &  \\
+    \hline
+    Beschleunigungsspannung & \\
+       
+   \end{tabular} 
+\end{center}
+
+
+
+\section{b. Fliege}
+
+\subsection{Aufnahme 1: Lorem ipsum...}
+
+\paragraph{Bemerkungen:}
+\begin{center}
+    \begin{tabular}{|l|r|}
+    \hline
+     Dateiname &  \\
+     \hline
+        
+    \end{tabular} 
+ \end{center}
+
+\paragraph{Einstellungen:}
+
+\begin{center}
+   \begin{tabular}{l|r}
+    \rowcolor{lightgray}\textbf{Parameter} & \textbf{Eingestellter Wert} \\
+    \hline\hline
+    Vergrößerung &  \\
+    \hline
+    Arbeitsabstand (WD) & \\
+    \hline
+    Strahldurchmesser &  \\
+    \hline
+    Beschleunigungsspannung & \\
+       
+   \end{tabular} 
+\end{center}
+
+
+
+\section{c. Zinnstandart}
+
+\subsection{Aufnahme 1: Lorem ipsum...}
+
+\paragraph{Bemerkungen:}
+\begin{center}
+    \begin{tabular}{|l|r|}
+    \hline
+     Dateiname &  \\
+     \hline
+        
+    \end{tabular} 
+ \end{center}
+
+\paragraph{Einstellungen:}
+
+\begin{center}
+   \begin{tabular}{l|r}
+    \rowcolor{lightgray}\textbf{Parameter} & \textbf{Eingestellter Wert} \\
+    \hline\hline
+    Vergrößerung &  \\
+    \hline
+    Arbeitsabstand (WD) & \\
+    \hline
+    Strahldurchmesser &  \\
+    \hline
+    Beschleunigungsspannung & \\
+       
+   \end{tabular} 
+\end{center}
+
+
+
+\section{d. Gebrochene Schraube}
+
+\subsection{Aufnahme 1: Lorem ipsum...}
+
+\paragraph{Bemerkungen:}
+\begin{center}
+    \begin{tabular}{|l|r|}
+    \hline
+     Dateiname &  \\
+     \hline
+        
+    \end{tabular} 
+ \end{center}
+
+\paragraph{Einstellungen:}
+
+\begin{center}
+   \begin{tabular}{l|r}
+    \rowcolor{lightgray}\textbf{Parameter} & \textbf{Eingestellter Wert} \\
+    \hline\hline
+    Vergrößerung &  \\
+    \hline
+    Arbeitsabstand (WD) & \\
+    \hline
+    Strahldurchmesser &  \\
+    \hline
+    Beschleunigungsspannung & \\
+       
+   \end{tabular} 
+\end{center}
+
+
+
+\section{e. Selbstgewählt}
+
+\subsection{Aufnahme 1: Lorem ipsum...}
+
+\paragraph{Bemerkungen:}
+\begin{center}
+    \begin{tabular}{|l|r|}
+    \hline
+     Dateiname &  \\
+     \hline
+        
+    \end{tabular} 
+ \end{center}
+
+\paragraph{Einstellungen:}
+
+\begin{center}
+   \begin{tabular}{l|r}
+    \rowcolor{lightgray}\textbf{Parameter} & \textbf{Eingestellter Wert} \\
+    \hline\hline
+    Vergrößerung &  \\
+    \hline
+    Arbeitsabstand (WD) & \\
+    \hline
+    Strahldurchmesser &  \\
+    \hline
+    Beschleunigungsspannung & \\
+       
+   \end{tabular} 
+\end{center}
