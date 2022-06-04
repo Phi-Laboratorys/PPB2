@@ -1,0 +1,133 @@
+% Manuel Lippert - Paul Schwanitz
+% Physikalisches Praktikum
+
+% 3.Kapitel  Protokoll
+
+\chapter{Messprotokoll}
+\label{chap:protokoll}
+
+
+\section{Versuchsdurchführung invertiertes Pendel}
+\label{sec:versuchPendel}
+\subsection*{Bifurkationsdiagramm}
+\label{sub:bifu}
+Vermessung der Gleichgewichtslage $\theta_g$ in Abhängigkeit der Masse $M$. Dabei wird die Gleichgewichtslage über eine Spannung $U_a$, welche durch den in (\ref{sub:aufbauPendel}) beschriebenen Schaltkreis erzeugt wird. Dabei wird angenommen (siehe (\ref{sub:aufbauPendel})), dass $U_a$ proportional zu dem Auslenkwinkel im Gleichgewicht $\theta_g$ ist und damit der generelle Verlauf der Graphen identisch ist.
+\begin{itemize}
+\item Messfehler Waage: $s_a = 0,005\, g = s_r$
+\item Messfehler Multimeter: $s_a = 0,00005$ V$= s_r$\\
+      Durch starke Schwankungen am Multimeter verändert sich der Wert des Fehlers des Multimeters mit der Zunahme der Masse $M$
+\item Messfehler Stoppuhr: $s_a = 0,01$ s $=s_r$
+\item Länge des Pendels (mit Stahlmaßstab): $l = 37$ cm
+\item Gewicht Feststellschraube: $m_s = 3,14$ g
+\end{itemize}
+Datei: BifurkationPendel.csv
+
+\textbf{Verifikation Ergebnis:}\\
+Freie Schwingung des Pendels bei einer Auslenkung bis ca. 1V. Messung der Schwingunsdauer $T$ (10fach) mit Smartphone (Google Pixel 5). Über die Schwingungsdauer wird dann die Federkonstante $k$ des Pendels berechnet.
+
+Datei: Schwingunsdauer\_woMass.csv; Messung ohne Masse.\\
+Datei: Schwingunsdauer\_wMass.csv; Messung mit 12,58 g.
+
+Grobe Auswertung: Kritische Masse $M_k\approx19,3$ g wurde durch Überschlagsrechnung bestätigt.
+
+\subsection*{Schwache Nichtlinearität}
+\label{sub:weakLin}
+Montage des Dämpfungssegels, wobei dabei zu beachten ist, dass die kritsche Masse $M_k\approx19,3$ g nicht überschritten wird, damit man im monostabilen Zustand des Pendels bleibt.
+\begin{itemize}
+    \item Masse Dämfungssegel: $m=4,4$ g
+    \item Zusätzlich montierte Masse: $m = 10,42$ g
+\end{itemize}
+Die Masse $M_{total}= 14,41$ g bleibt hierbei über den ganzen Versuchsteil unverändert und das Dämpfungssegel befestigt über den kompletten restlichen Versuchsverlauf.
+\paragraph{a)}
+Für die Amplitudenabhängigkeit des Pendels wird dieses einmal ausgelenkt und dessen Schwingung über das Messprogramm aufgezeichnet.
+
+Datei: 06\_09\_2021\_14\_41\_30\_G11\_pendel\_0.dat
+
+\paragraph{b)}
+Messung der Hystereseschleife der Schwingung mit Messprogramm.
+
+Einstellungen: 2000 Steps; Start: 0Hz; End: 1,1Hz\\
+Datei: 06\_09\_2021\_14\_30\_52\_06\_09\_2021\_14\_30\_52\_G11\_pendel\_resonanz\_\_0.dat\\
+
+\subsection*{Starke Nichtlinearität}
+\label{sub:strongLin}
+Veränderung der Masse über die kritische Masse für einen bistabilen Zustand, beachte das Dämpfungsblech aus (2a) ist immer noch mit befestigt.
+\begin{itemize}
+    \item Zusätzlich montierte Masse: $m = 19,44$ g
+\end{itemize}
+Diese Masse $M_{total}=23,84$ g bleibt auch über diesen Versuchsteil unverändert.
+
+\paragraph{a)}
+Variation der Antriebsfrequenz $\omega$ in kleinen Schritten zur Lokalisierung der Schwingungszustände. Aufnahme der Attraktoren und Leistungsspektren mit dem Messprogramm.
+
+Labview Absturz bei 0,517 Hz 
+
+Datei: Datum\_Uhrzeit\_G11\_pendel\_0.dat (Mehrere Files mit selben Namen in zugehörige Ordner gespeichert)
+
+Neustart bei 0,52 Hz
+quasichaotisch bei $\omega\approx0,411$ Hz
+
+Datei: Datum\_Uhrzeit\_Richter\_pendel\_0.dat (Wegen Neustart Dateienbennung verändert gewesen)
+
+Frequenzen den einzelnen Schwingungszuständen werden den Daten entnommen.
+
+\paragraph{b)}
+Verdeutlichung der Empfindlichkeit der Anfangsbedingung mit Ruhelage auf der linken Seite (Pendel hängt auf die linke Seite). Aufnahme von drei Zeitserien Trajektorien (eine mehr als benötigt) mittels des Messprogramms.
+\begin{itemize}
+    \item Anregungsfrequenz $\omega$: 0,411Hz
+\end{itemize}
+Schrittmotor in Anfangspos. (Armstellung ganz unten)
+
+Datei: Datei: Datum\_Uhrzeit\_G11\_pendel\_0.dat (Mehrere Files mit selben Namen in zugehörige Ordner gespeichert)
+
+\section{Versuchsdurchführung Shinriki}
+\label{sec:versuchShin}
+
+\textbf{Einstellfehler der Widerstände}
+\begin{align}
+    s_{R_1} = 1\, \text{k}\Omega \\
+    s_{R_2} = 2\, \text{k}\Omega
+\end{align}
+
+\textbf{a) Phasendiagramm}\\
+Wir stellen einzelne Paramterwerte für $R_2$ und $R_1$ ein und varieren je nach eingestelltem Parameter mit $R_2$ oder $R_1$ bis das Phasendiagramm vollständig abgefahren ist ab. Widerstände schwer ablesbar, weswegen Angaben fehlerhaft sein können, $R_1$ konnte hierbei genauer bestimmt werden. Alle Werte werden in $\text{k}\Omega$ angeben.\\
+\begin{tabular}{c  r| c  r  r  r  r  r  r  r}
+    Par &  & Var & Per1 & Per2 & Per4 & Chaos1 & Per3 & Chaos2 & Double\\
+    \hline
+    $R_2$ & 16,50 & $R_1$ & 13,40 & 20,10 & 21,10 & 21,46 & 22,20 & 22,30 & 24,62\\
+    $R_2$ & 13,00 & $R_1$ & 16,16 & 23,68 & 25,19 & 25,86 & 26,72 & 26,82 & 28,98\\
+    $R_1$ & 55,00 & $R_2$ & 7,88  & 8,52 & 8,72 & 8,76 & 8,92 & 8,96 & 9,16\\
+\end{tabular}\\
+
+\textbf{b) Schnitt im Phasendiagramm}\\
+Wir schneiden bei fixierten $R_2=8,4~\text{k}\Omega$ durch das Phasendiagramm.
+Daten werden elektronisch erstellt.
+
+\textbf{c) Bifurkationsdiagramm}\\
+Nutzen oben verwendeten Schnitt für diese Aufgabe zum Erstellen eines Bifurkationsdiagramms. Dies geschieht wieder elektronisch.
+
+\textbf{d) Großmann-Feigenbaum-Konstante}\\
+Wir vermessen nun gesondert die einzelnen Bifurkationen durch Variation von $R_1$ mit gleichen $R_2$ aus (b). Alle Werte werden $\text{k}\Omega$ angegeben. Hierbei steht der Index $i$ in $r_i$ für die einzeln Bifurkationen.\\
+\begin{tabular}{c c c}
+    $r_1$ & $r_2$ & $r_3$\\
+    \hline
+    59 & 65,6 & 67,6
+\end{tabular}
+
+\begin{itemize}
+    \item $r_1$ Periode 1 auf 2
+    \item $r_2$ Periode 2 auf 4
+    \item $r_3$ Periode 4 auf 8
+\end{itemize}
+
+\textbf{e) Einbettungstheorem}\\
+Aufnahme des Originalattraktors bei $R_2$ wie in (b) und $R_1=51~\text{k}\Omega$ und $\delta t=60$ n (?); Rekonstruktion mithilfe des entsprechenden Programmteils mit qualitativen Übereinstimmung der Form des rekonstruierten Attraktors mit dem Originalattraktor.
+
+
+% Einbindung des Protokolls als pdf (mit Seitenzahl etc.)
+% Erste Seite mit Überschrift
+%\includepdf[pages = 1, landscape = false, nup = 1x1, scale = \skalierung , pagecommand={\thispagestyle{empty}\chapter{Protokoll}}]
+%            {03-Protokoll/Protokoll.pdf}
+% Restliche Seiten richtig skaliert
+%\includepdf[pages = -, landscape = false, nup = 1x1, scale = \skalierung , pagecommand={}]
+%            {03-Protokoll/Protokoll.pdf}

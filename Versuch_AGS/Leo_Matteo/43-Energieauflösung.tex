@@ -1,0 +1,37 @@
+\section{Energieauflösung des Ge - Detektors}
+
+Als zweites untersuchen wir die Energieauflösung unseres Ge-Detektors. Der Aufbau war folgendermaßen:\\
+Der Ge-Detektor sitzt unter einem Sockel, welcher von oben mit einen Präparat beladbar ist. Der Detektor wird von unten mit flüssigem 
+Stickstoff gekühlt. Dabei wird der Ge-Detektor mit 3,5\,kV in Sperrrichtung betrieben. Dieser ist mit einem Vierkanalanalysator verbunden, 
+welcher dann das 
+Spektrum in Kanälen auflöst. Diese Auflösung wird dann von einem Computer mit dem Programm GENIE2k ausgelesen und dargestellt.\\
+Im Folgenden wollen wir die Halbwertsbreite der Linien der Co60-Quelle ausmessen. Dafür nehmen wir circa eine Minute lang das Spektrum 
+der Quelle auf. Danach exportieren wir die Daten in eine RTP-Datei.\\
+
+Aus diesen Daten schreiben wir Dateien mit 'Energie' und 'Anzahl der Detektionen' als Kategorien. Dann plottet man einen Peak und ermittelt grafisch die Halbwertsbreite. 
+Dabei können wir verifizieren, dass die Energieeichung erfolgreich war, da wir an Abbildung \ref{bild:EichungDrei} den Abstand der beiden Peaks der Co-60 Linien ablesen können. Dieser ist
+– wie erwartet – um die 160 keV groß.  
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = \linewidth]{Bilder/Auswertung/Halbwertsbreite.png}
+    \caption{Linienbreite der Cobalt-60 Quelle}
+    \label{bild:linienbreite}
+\end{figure}
+
+Aus der Grafik \ref{bild:linienbreite} kann man herauslesen, dass die Halbwertsbreite circa 10\,keV ist. Die Energieauflösung ist circa Halbwertsbreite. Das heißt 
+die Energieauflösung ist ungefähr 10\,keV, was eine deutlich bessere Auflösung ist als die eines NaJ-Szintillations-Detektor \cite[S.9]{Kador2021}. Dies entspricht unseren Erwartungen.\\
+ 
+
+Außerdem sieht man an den Daten sehr schön die Comptonkanten. Dabei handelt es sich um Kanten im Spektrum, welche durch die Comptonstreuung entstehen. 
+Da das Photon seinem 'Stoßpartner' aufgrund von Energie- und Impulserhaltung nur eine gewisse Potion Energie mitgeben kann, gibt es Oberkanten im 
+Spektrum. Unterhalb der Kante kommt das Comptonkontinuum, welche Stöße mit Energieübertagung kleiner der maximalen Energiemenge sind.
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = \linewidth]{Bilder/Auswertung/Comtonkante.png}
+    \caption{Comptonkanten: Kante 1 gehört zum Peak bei 1,2MeV, Kante zwei zum anderen Peak}
+\end{figure}
+
+\clearpage

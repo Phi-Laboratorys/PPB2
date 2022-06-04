@@ -1,0 +1,21 @@
+Bei 0 Zählrate
+Alu: 23,31
+Eisen: 22,99
+Blei: 23,94
+
+Absorbtionskoeffizient:
+
+Alu:
+mu = 0.19633435323928802+- 0.0136 = 0.196+-0.014
+mu/ro = 0,0727 +-0,0051
+ro =  	2,6989 g/cm3  source: https://de.wikipedia.org/wiki/Aluminium
+
+Eisen:
+mu = 0.532+- 0,044
+ro = 7,874 g/cm3 source: https://de.wikipedia.org/wiki/Eisen
+mu/ro = 0,0675+-0,0055
+
+Blei:
+mu = 1.146688+-0.102834
+ro =  	11,342 g/cm³ source: https://de.wikipedia.org/wiki/Blei
+mu/ro = 0,1011+-0,0090

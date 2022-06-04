@@ -1,0 +1,218 @@
+% Charlotte Geiger - Manuel Lippert - Leonard Schatt
+% Physikalisches Praktikum
+
+% 3.Kapitel  Protokoll
+
+% Variables
+\def\skalierung{0.65}
+
+\chapter{Methodik}
+\label{chap:protokoll}
+\section{Aufbau}
+
+Der hier verwendete Aufbau besteht aus einem AFM der Marke Nanosurf, einer dazugehörenden Steuerelektronik und einem Computer mit dem 
+Programm  'AFM  Nanosurf  Easy  Scan  2'. An diesem kann der Messbereich, der Setpoint, die Zeit pro Zeile und die Anzahl der Zeilen und 
+Punkte pro Zeile festgelegt werden. Bilder zum Versuchsaufbau befinden sich im Anhang \ref{section:AnhangAufbau}. \\
+
+\section{Versuchsdurchführung}
+
+Eine Durchführung läuft folgendermaßen ab:\\
+Die Probe wird aus ihrer Schachtel genommen und auf die magnetische Platte gegeben. Dann wird mit Hilfe von Millimeterschrauben die Probe unter den Cantilever gefahren. 
+Dort wird der Cantilever manuell abgesenkt bis man den Schatten des Cantilevers auf dem Präparat in der Kamera sieht. Danach lässt man den Computer den Cantilever 
+automatisch auf die richtige Distanz fahren. Dies geschieht durch eine PI(D)-Regler Schaltung, welche schon voreingestellt war. \\
+Anschließend drückt man, nachdem man die entsprechenden Größen eingegeben hat, 'Start' und die Messung läuft von alleine ab. Die Einstellung zur jeweiligen Messung sind unten 
+vermerkt.\\
+Danach speichert man die Messung als nid-File. Den Angleich der X-Y-Ebene muss man hier nicht manuell durchführen. Diesen übernimmt das Programm automatisch.
+
+
+\subsection*{Eichgitter}
+\begin{center}
+    \centering
+    \begin{tabular}{l|r}
+        Modus & Contact Mode \\
+        Image size & 62,65 $\mu$m \\
+        Time / Line & 2s \\
+        Points/Line & 512\\
+        Setpoint & 15 nN \\
+        P-Gain & 10000 \\
+        I-Gain & 1000 \\
+        D-Gain & 0 \\
+        
+    \end{tabular}
+\end{center}
+
+\subsection*{CD-Presswerkzeug}
+\subsubsection*{50$\mu$m}
+\begin{center}
+    \centering
+    \begin{tabular}{l|r}
+        Modus & Contact Mode\\
+        Image size & 50,00 $\mu$m \\
+        Time / Line & 2s \\
+        Points/Line & 512\\
+        Setpoint & 15 nN \\
+        P-Gain & 10000 \\
+        I-Gain & 1000 \\
+        D-Gain & 0 \\
+        
+    \end{tabular}
+\end{center}
+
+\subsubsection*{20$\mu$m}
+
+\begin{center}
+    \centering
+    \begin{tabular}{l|r}
+        Modus & Contact Mode\\
+        Image size & 19,34 $\mu$m \\
+        Time / Line & 2s \\
+        Points/Line & 512\\
+        Setpoint & 15 nN \\
+        P-Gain & 10000 \\
+        I-Gain & 1000 \\
+        D-Gain & 0 \\
+        
+    \end{tabular}
+\end{center}
+
+\subsection*{Nanotubes}
+\subsubsection*{15$\mu$m}
+
+\begin{center}
+    \centering
+    \begin{tabular}{l|r}
+        Modus & Contact Mode\\
+        Image size & 15,00 $\mu$m \\
+        Time / Line & 1,3s \\
+        Points/Line & 512\\
+        Setpoint & 3,02 nN \\
+        P-Gain & 10000 \\
+        I-Gain & 1000 \\
+        D-Gain & 0 \\
+        
+    \end{tabular}
+\end{center}
+
+\subsubsection*{2$\mu$m}
+
+\begin{center}
+    \centering
+    \begin{tabular}{l|r}
+        Modus & Contact Mode\\
+        Image size & 2,168 $\mu$m \\
+        Time / Line & 1,3s \\
+        Points/Line & 512\\
+        Setpoint & 3,02 nN \\
+        P-Gain & 10000 \\
+        I-Gain & 1000 \\
+        D-Gain & 0 \\
+        
+    \end{tabular}
+\end{center}
+
+\subsection*{Goldcluster}
+
+\subsubsection*{2,5 $\mu$m}
+\begin{center}
+    \centering
+    \begin{tabular}{l|r}
+        Modus & Non-Contact Mode\\
+        Image size & 2,5 $\mu$m \\
+        Time / Line & 1s \\
+        Points/Line & 512\\
+        Setpoint & 60\% \\
+        P-Gain & 10000 \\
+        I-Gain & 1000 \\
+        D-Gain & 0 \\
+        
+    \end{tabular}
+\end{center}
+
+\subsubsection*{1,5 $\mu$m}
+\begin{center}
+    \centering
+    \begin{tabular}{l|r}
+        Modus & Non-Contact Mode\\
+        Image size & 1,5 $\mu$m \\
+        Time / Line & 1s \\
+        Points/Line & 512\\
+        Setpoint & 70\% \\
+        P-Gain & 10000 \\
+        I-Gain & 1000 \\
+        D-Gain & 0 \\
+        
+    \end{tabular}
+\end{center}
+
+\subsubsection*{0,375 $\mu$m}
+\begin{center}
+    \centering
+    \begin{tabular}{l|r}
+        Modus & Non-Contact Mode\\
+        Image size & 0,375 $\mu$m \\
+        Time / Line & 1s \\
+        Points/Line & 512\\
+        Setpoint & 70\% \\
+        P-Gain & 10000 \\
+        I-Gain & 1000 \\
+        D-Gain & 0 \\
+        
+    \end{tabular}
+\end{center}
+
+\subsection*{Oberflächengitter}
+
+\begin{center}
+    \centering
+    \begin{tabular}{l|r}
+        Modus & Non-Contact Mode\\
+        Image size & 20 $\mu$m \\
+        Time / Line & 1,75s \\
+        Points/Line & 512\\
+        Setpoint & 60\% \\
+        P-Gain & 10000 \\
+        I-Gain & 1000 \\
+        D-Gain & 0 \\
+        
+    \end{tabular}
+\end{center}
+
+\subsection*{PSPMMA}
+
+\begin{center}
+    \centering
+    \begin{tabular}{l|r}
+        Modus & Non-Contact Mode, Phase Contrast\\
+        Image size & 2 $\mu$m \\
+        Time / Line & 1s \\
+        Points/Line & 512\\
+        Setpoint & 70\% \\
+        P-Gain & 10000 \\
+        I-Gain & 1000 \\
+        D-Gain & 0 \\
+        
+    \end{tabular}
+\end{center}
+
+
+
+
+\section{Geräte und Fehler}
+
+Rasterkraftmikroskop: Inventarnummer: 88459\\
+Steuerelektronik: Inventarnummer: 88080\\
+Cantilever (Contact Mode): NANOSENSORS type PPP-CONT nachdeR-C, S/N 78932F10L995, vom 31.7.14, Set 5\\
+Cantilever (Non-Contact): NANOSENSORS, Type PPP-NCLR-10, S/N 66017F4L734
+Eichgitter: Nummer: BT00250, x-y-Periodizität: 10,0 $\mu$m, z-Höhe: 119nm, Batch: 2003-03-29.2
+Diverse Proben: Nanosurf Extended Sample Kapitel\\
+Oberflächengitter: Gitter(1.9.14)
+
+
+
+% Einbindung des Protokolls als pdf (mit Seitenzahl etc.)
+% Erste Seite mit Überschrift
+%\includepdf[pages = 1, landscape = false, nup = 1x1, scale = \skalierung , pagecommand={\thispagestyle{empty}\chapter{Protokoll}}]
+%            {03-Protokoll/Protokoll.pdf}
+% Restliche Seiten richtig skaliert
+%\includepdf[pages = -, landscape = false, nup = 1x1, scale = \skalierung , pagecommand={}]
+%            {03-Protokoll/Protokoll.pdf}

@@ -1,0 +1,111 @@
+% Autor: Manuel Lippert
+% Physikalisches Praktikum
+
+% Main-Datei für die Auswertung in TeX
+
+% Struktur:
+% Jedes Kapitel hat einen Input-File. Um Merge-Konflikte zu verhindern wird angeraten für jede 
+% Datei eine eigene Tex Datei zu machen und sie im jeweiligen Kapitel zu importieren. Die in
+% Input-Struktur dient zur besseren Übersicht und für mögliche Ordner, welche hier vorhanden sind. Die Zahlen vor den 
+% Ordner dient zur Ordnung der einzelnen tex-Files nach Kapiteln
+
+
+% Packages
+\documentclass[paper=a4,bibliography=totoc,BCOR=10mm,twoside,numbers=noenddot,fontsize=11pt]{scrreprt}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1, utf8]{inputenc} %ä, ö, ü inbegriffen
+\usepackage[babel,german=quotes]{csquotes} %For Quotes
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{nicefrac}
+\usepackage{fancyvrb}
+\usepackage{amsmath,amssymb,amstext}
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{natbib}
+\usepackage{microtype}
+\usepackage[format=plain]{caption}
+\usepackage{physics}
+\usepackage{titleref} 
+
+% Zusätzliche Packages
+\usepackage{geometry} % Verändert Seitengeometrie
+\usepackage{anyfontsize} % Alle Schriftgrößen möglich machen
+\usepackage[table]{xcolor} % Farbliche Gestaltung Tabellen
+\usepackage{ifthen} % Für kompliziertere tex-Files
+\usepackage[absolute,overlay]{textpos} %Textboxen
+\usepackage{amsfonts} % Schriftarten
+\usepackage{xstring} % Stringoperationen
+\usepackage{tikz} % Zeichnungen
+\usepackage{pdfpages} % Import von pdfs (Protokolle)
+\usepackage{hyperref} % Verlinkungen im Dokument
+\usepackage{makecell} % Zeilenumbruch in Zelle
+
+% Abschnittseinrückung und -abstand
+% Die folgenden Zeilen sollen möglichst nicht verändert werden
+\parindent 0.0cm
+\parskip 0.8ex plus 0.5ex minus 0.5ex
+
+% Anzahl und Größe von Gleitobjekten
+% maximal 2 Objekte oben und unten
+% erlaubt auch größere Bilder, welche die ganze Seite benötigen
+% Die folgenden Zeilen sollen möglichst nicht verändert werden
+\setcounter{bottomnumber}{2}
+\setcounter{topnumber}{2}
+\renewcommand{\bottomfraction}{1.}
+\renewcommand{\topfraction}{1.}
+\renewcommand{\textfraction}{0.}
+
+%\sc und \bc veraltet. Daher: (20.09.2018)
+\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\DeclareOldFontCommand{\bf}{\normalfont\scshape}{\textbf}
+
+% Verschiedenes
+\pagestyle{headings}          % Der Seitenstil sollte möglichst nicht verändert werden
+\graphicspath{{./Bilder/}}    % Der Pfad für die Abbildungen Abbildungen wird gesetzt
+\VerbatimFootnotes            % \verb etc. auch in \footnotes mφglich
+
+% Funktionen
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
+\newcolumntype{g}{>{\columncolor[rgb]{ .741,  .843,  .933}}l}
+% Tiefgestellte Zahlen nicht kursiv
+\catcode`_=\active
+\newcommand_[1]{\ensuremath{\sb{\mathrm{#1}}}}
+
+\begin{document}
+
+    \nonfrenchspacing
+
+    % 0.Chapter Cover
+    \input{00-Cover/Cover.tex}
+
+    \thispagestyle{empty}
+    \cleardoublepage
+    \tableofcontents
+    \cleardoublepage
+
+    % 1.Chapter Instructions
+    \input{01-Introduction/Introduction.tex}
+
+    % 2.Chapter Theorie
+    \input{02-Theorie/Theorie.tex}
+
+    % 3.Kapitel Protocol
+    \input{03-Protocol/Protocol.tex}
+
+    % 4.Kapitel Evaluation
+    \input{04-Evaluation/Evaluation.tex}
+
+    % 5.Chapter Closure
+    \input{05-Closure/Closure.tex}
+
+    % Appendix
+    %\input{06-Appendix/Appendix.tex}
+
+    % Literatur
+    \bibliographystyle{Auswertung.bst}
+    \bibliography{Auswertung.bib}
+    
+\end{document}
