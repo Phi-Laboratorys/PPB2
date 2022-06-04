@@ -1,0 +1,83 @@
+\chapter{Fehlerfortpflanzungen}
+\section{Axiale Moden}
+\textbf{Modenumrechnung:}
+\begin{align}
+    \nu&=\frac{x}{5,74\cdot10^{-3}\,\text{s}}\cdot\left(2\,\text{GHz}\right)\\
+    s_\nu&=2,\text{GHz}\cdot\sqrt{\left(\frac{s_x}{5,74\cdot10^{-3}}\right)^2+\left(\frac{x}{\left(5,74\cdot10^{-3}\,\text{s}\right)^2}\cdot0,001\,\text{s}\right)^2}
+\end{align}
+
+\textbf{Auflösevermögen:}
+\begin{align}
+    A&=\frac{c}{\lambda\cdot\Delta\nu_m}\\
+    s_A&=\left|s_{\Delta\nu_m}\frac{c}{\lambda\cdot\left(\Delta\nu_m\right)^2}\right|
+\end{align}
+
+\textbf{Finesse:}
+\begin{align}
+    F&=\frac{FSR}{\Delta\nu_m}\\
+    F&=\left|s_{\Delta\nu_m}\frac{FSR}{\left(\Delta\nu_m\right)^2}\right|
+\end{align}
+\section{Bestimmung des Verstärkungsfaktor des laseraktiven Mediums}
+\subsection{Messung der Intensität}
+\textbf{Brechungsindex:}
+\begin{align}
+    n&=\tan\left(\alpha_B\right)\\
+    s_n&=s_{\alpha_B}\cdot\frac{1}{\cos^2(\alpha_B)}
+\end{align}
+\subsection{Gewinn-Verlust-Bilanz}
+\textbf{Verstärkung:}
+\begin{align}
+    \nu&=\frac{\ln\left(\frac{1}{R_1R_2T^2}\right)}{2\cdot l_\text{Medium}}\\
+    s_\nu&=s_T\cdot\frac{1}{l_\text{Medium}\cdot T}
+\end{align}
+
+\textbf{Transmissionskoeffizient:}
+\begin{align}
+    T&=\left(\frac{1-R}{1+R}\right)^2\\
+    s_T&=\left|s_R\cdot\frac{4\left(R-1\right)}{\left(R+1\right)^3}\right|
+\end{align}
+
+\textbf{Reflexionsgrad:}
+\begin{align}
+    R&=\frac{\tan^2\left(\alpha-\beta\right)}{\tan^2\left(\alpha+\beta\right)}\\
+    s_R&=\frac{2\cdot\tan(\alpha-\beta)}{\tan^3\left(\alpha+\beta\right)}\sqrt{\left(s_\alpha\cdot\left(\frac{\tan(\alpha+\beta)}{\cos^2(\alpha-\beta)}+\frac{\tan(\alpha-\beta)}{\cos^2(\alpha+\beta)}\right)\right)^2+\left(s_\beta\cdot\left(\frac{\tan(\alpha+\beta)}{\cos^2(\beta-\alpha)}+\frac{\tan(\beta-\alpha)}{\cos^2(\alpha+\beta)}\right)\right)^2}
+\end{align}
+
+\textbf{Beta:}
+\begin{align}
+    \beta&=\frac{\arcsin(\alpha)}{n}\\
+    s_\beta&=\sqrt{\left(s_n\cdot\frac{\arcsin(\alpha)}{n^2}\right)^2+\left(s_\alpha\cdot\frac{1}{\sqrt{1-\alpha^2}\cdot n}\right)^2}
+\end{align}
+
+\section{Gauß'sche Strahlenoptik}
+\textbf{Brennweite der Linse:}
+\begin{align}
+    f&=\frac{s^2+z_R^2+2ss'\pm\sqrt{s^4+z_R^4+2s^2z_R^2-4(s')^2z_R^2}}{2(s'+s)}\\
+    s_f&=\sqrt{\left(s_s\cdot\frac{\partial f}{\partial s}\right)^2+\left(s_s'\cdot\frac{\partial f}{\partial s'}\right)^2+\left(s_{z_R}\cdot\frac{\partial f}{\partial z_R}\right)^2}\\
+    \frac{\partial f}{\partial s}&=\frac{-\frac{s^3+z_R^2s}{\sqrt{s^4+z_R^4+2s^2z_R^2-4(s')^2z_R^2}}+s+s'}{(s+s')}-\frac{s^2+2s's+z_R^2-\sqrt{s^4+z_R^4+2s^2z_R^2-4(s')^2z_R^2}}{2(s+s')^2}\\
+    \frac{\partial f}{\partial s'}&=\frac{\frac{4z_R^2s'}{\sqrt{s^4+z_R^4+2s^2z_R^2-4(s')^2z_R^2}}+2s}{2(s+s')}-\frac{s^2+2s's+z_R^2-\sqrt{s^4+z_R^4+2s^2z_R^2-4(s')^2z_R^2}}{2(s+s')^2}\\
+    \frac{\partial f}{\partial z_R}&=\frac{z_R}{s+s'}-\frac{z_R^3+4s^2z_R-4(s')^2z_R}{\left(s+s'\right)\cdot\sqrt{s^4+z_R^4+2s^2z_R^2-4(s')^2z_R^2}}\\
+    z_R&=\frac{\pi w_0^2}{\lambda}\\
+    s_{z_R}&=s_{w_0}\cdot\frac{2\pi w_0}{\lambda}
+\end{align}
+
+\textbf{Strahltaille im Resonator:}
+\begin{align}
+    w_{00}&=\sqrt{\frac{\lambda}{2\pi}\cdot\sqrt{L(2R-L)}}\\
+    s_{w_{00}}&=s_L\cdot\sqrt{\frac{\lambda}{2\pi}}\cdot\frac{R-L}{((2R-L)L)^{\frac{3}{4}}}
+\end{align}
+
+\textbf{Theoretische Strahltaille:}
+\begin{align}
+    w_0&=\left(\frac{1}{w_{00}^2}\left(1-\frac{s}{f}\right)^2+\frac{1}{f^2}\left(\frac{\pi\cdot w_{00}}{\lambda}\right)^2\right)^{-\frac{1}{2}}\\
+    s_{w_0}&=\sqrt{\left(s_{w_{00}}\cdot\frac{\partial w_0}{\partial w_{00}}\right)^2+\left(s_{f}\cdot\frac{\partial w_0}{\partial f}\right)^2+\left(s_{s}\cdot\frac{\partial w_0}{\partial s}\right)^2}\\
+    \frac{\partial w_0}{\partial w_{00}}&=\frac{\frac{\pi^2w_{00}}{f^2\lambda^2}-\frac{\left(1-\frac{s}{f}\right)^2}{w_{00}^3}}{\left(\frac{\pi^2w_{00}^2}{f^2\lambda^2}+\frac{\left(1-\frac{s}{f}\right)^2}{w_{00}^2}\right)^{\frac{3}{2}}}\\
+    \frac{\partial w_0}{\partial f}&=\frac{\frac{s-\frac{s^2}{f}}{f^2w_{00}^2}-\frac{\pi^2w_{00}^2}{\lambda^2f^3}}{\left(\frac{\pi^2w_{00}^2}{f^2\lambda^2}+\frac{\left(1-\frac{s}{f}\right)^2}{w_{00}^2}\right)^{\frac{3}{2}}}\\
+    \frac{\partial w_0}{\partial s}&=\frac{1-\frac{s}{f}}{fw_{00}^2\left(\frac{\pi^2w_{00}^2}{f^2\lambda^2}+\frac{\left(1-\frac{s}{f}\right)^2}{w_{00}^2}\right)^{\frac{3}{2}}}
+\end{align}
+
+\textbf{Laserleistungsdichte:}
+\begin{align}
+    \frac{P}{A}&=\frac{(1-\frac{1}{e^2})\cdot P_{max}}{w_0^2\pi}\\
+    s_{\frac{P}{A}}&=\sqrt{\left(s_{w_0}\cdot\frac{(1-\frac{1}{e^2})\cdot P_{max}}{2w_0^3\pi}\right)^2+\left(s_{P_{max}}\cdot\frac{(1-\frac{1}{e^2})}{w_0^2\pi}\right)^2}
+\end{align}

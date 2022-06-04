@@ -1,0 +1,95 @@
+% 3. Protokoll
+
+% Variables
+\def\skalierung{0.65}
+
+\chapter{Messprotokoll}
+\label{chap:protokoll}
+\textbf{Messgeräte und Proben:}
+\begin{itemize}
+    \item Konfokalmikroskop: Leica TCS SP5 mit HCX PLAPO lambda blue 63.0 x 1.4 OIL UV Objektiv (gesteuert durch Computer-Messprogramm)
+    \item Argon-Ionen-Laser (Anregung bei Wellenlängen von \SI{458}{\nano\metre} und \SI{514}{\nano\metre})
+    \item Detektor: Photomultiplier (PMT)
+    \item Lebenszeitmessung: PicoHarp 300 TCSPC Module und Picosecond Event Timer
+    \item Proben: CFP, YFP und CY markierte Proben mit Eigenschaften aus Kapitel \ref{sec:proben}
+\end{itemize}
+
+\section*{Bildaufnahme mit Konfokalmikroskop}
+\label{sec:bildaufnahme}
+\begin{itemize}
+    \item \SI{400}{\hertz} ist die optimale Speed-Einstellung 
+    \item Minimale Aufnahmedauer hängt von Speed ab
+    \item Je länger die Aufnahmedauer, desto stärker wird die Zelle bestrahlt und somit gegebenenfalls zerstört oder gebleicht
+    \item Zoom hängt mit eingestelltem Speed zusammen
+\end{itemize}
+
+\section*{Aufnahmen der Sensitized Emission}
+\label{sec:aufnahme}
+16 Aufnahmen von  $D_{CY}$, $A_{CY}$, $S_{CY}$ und Transmissionsbild mittels Messprogramm.\\
+
+\textbf{Einstellungen:}
+\begin{itemize}
+    \item Donor-Anregung: \SI{458}{\nano\metre} mit 30\% Leistung
+    \item FRET-Anregung: \SI{514}{\nano\metre} mit 4\% Leistung 
+    \item Line-Average = 4
+    \item Speed = \SI{400}{\hertz}
+\end{itemize}
+\newpage
+\textbf{Modus:}
+\begin{itemize}
+    \item[(1)] $D_{CY}$ + $S_{CY}$:\\
+    PMT1 (Donor):\\
+    \SI{470}{\nano\metre} bis \SI{500}{\nano\metre}, Gain = \SI{1000}{\volt}, Offset = 0\%, Auswahl = None\\
+    PMT3 (Akzeptor):\\
+    \SI{520}{\nano\metre} bis \SI{550}{\nano\metre}, Gain = \SI{1000}{\volt}, Offset = 0\%, Auswahl = None
+    \item[(2)] $A_{CY}$ + Transmissionsbild:\\
+    PMT3 (Akzeptor):\\
+     \SI{520}{\nano\metre} bis \SI{550}{\nano\metre}, Gain = \SI{1000}{\volt}, Offset = 0\%, Auswahl = None\\
+    PMT Trans:\\
+    Gain = \SI{400}{\volt}, Offset = 0\%, Auswahl = Scan-BF\\
+\end{itemize} 
+Reihenfolge Aufnahme Modus (1)$\rightarrow$(2)\\
+Dateiordner: \textit{CY} (Beide Farbstoffe), \textit{CFP} (Cyan), \textit{YFP} (Yellowqq
+
+\section*{Akzeptorbleichung (Bleaching)}
+10 Aufnahmen der CFP/YFP-Zelle für $D_{CY}$, $S_{CY}$ mittels Messprogramm vor nach dem Bleaching.\\
+
+\textbf{Einstellungen:}
+\begin{itemize}
+    \item Akzeptor-Anregung: \SI{514}{\nano\metre} mit 100\% Leistung
+    \item Line-Average = 1
+    \item Set background to zero = true
+\end{itemize}
+\textbf{Time Course:}
+\begin{itemize}
+    \item Pre-bleach: Frames = 10, t/frame[s] = 1.293, minimize = true
+    \item Bleach: Frames = 12
+    \item Post-bleach 1: Frames = 20, t/frame[s] = 1293, minimize = true
+\end{itemize}
+Dateinamen: \textit{CY-N-X.csv}; N = 1,...,10; X = D (Donor,PMT1), S (Sensitized, PMT3)\\
+Dateiordner: \textit{Bleach-CY} (Alle Snapshots des Experiments) Ausgewählter Snapshot: \textit{FRAP\_005Snapshot1}\\
+
+5 Aufnahmen von jeweils CFP- und YFP-Zelle zur überprüfung der Signifikanz der Messung, dabei bleiben die eingestellten Parameter gleich.\\
+Dateinamen CFP: \textit{CFP-N-X.csv}; N = 1,...,5; X = D (Donor,PMT1), S (Sensitized,PMT3)\\
+Dateinamen YFP: \textit{YFP-N.csv}; N = 1,...,3; (Akzeptor,PMT3)\\
+
+\section*{Lebenszeit}
+Messung der Lebenszeit an CFP/YFP, CFP und YFP Zellen mit einmal Exponentialfit und zweimal Exponentialfit und dem Gerätefehler IRF\\
+
+\textbf{Einstellungen:}
+\begin{itemize}
+    \item Laser: \SI{470}{\nano\metre} mit \SI{40}{\mega\hertz}
+    \item FILM: Zeitintervall = 2,01263 min, Repetitions = 93, max = 1000, Frames = 1  
+\end{itemize}
+
+\textbf{Modus}
+\begin{itemize}
+    \item PMT APD1:\\
+    Gain = 10, Auswahl = Scan-BF
+    \item PMT APD2:\\
+    Gain = 10, Auswahl = Scan-BF
+\end{itemize}
+
+Dateiordner: \textit{TCPSP-data}\\
+Dateinamen CY: \textit{CYN-chK.csv}; N = 1,...,6; K = 1, 2, 12 (Channals)\\
+Dateinamen CFP,YFP: \textit{ZN-chK.csv}; Z = CFP, YFP; N = 1, 2, 3;  K = 1, 2, 12 (Channals)

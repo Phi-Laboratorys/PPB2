@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="LASAF_WFIP.xsl"?>
+<Data>
+  <Image>
+    <ImageDescription>
+      <Name>FRAP_005Snapshot1</Name>
+      <Size>1.60 MB</Size>
+      <Channels>
+        <ChannelDescription DataType="0" ChannelTag="3" Resolution="8" NameOfMeasuredQuantity="" Min="0.000000e+000" Max="2.550000e+002" Unit="" LUTName="" IsLUTInverted="0" BytesInc="0" BitInc="0">
+        </ChannelDescription>
+        <ChannelDescription DataType="0" ChannelTag="2" Resolution="8" NameOfMeasuredQuantity="" Min="0.000000e+000" Max="2.550000e+002" Unit="" LUTName="" IsLUTInverted="0" BytesInc="1" BitInc="0">
+        </ChannelDescription>
+        <ChannelDescription DataType="0" ChannelTag="1" Resolution="8" NameOfMeasuredQuantity="" Min="0.000000e+000" Max="2.550000e+002" Unit="" LUTName="" IsLUTInverted="0" BytesInc="2" BitInc="0">
+        </ChannelDescription>
+      </Channels>
+      <Dimensions>
+        <DimensionDescription DimID="X" NumberOfElements="730" Origin="0.00" Length="730.00" Unit="m" BitInc="0" BytesInc="3" LogicalUnit="pixels" Voxel="1.000">
+        </DimensionDescription>
+        <DimensionDescription DimID="Y" NumberOfElements="730" Origin="0.00" Length="730.00" Unit="m" BitInc="0" BytesInc="2192" LogicalUnit="pixels" Voxel="1.000">
+        </DimensionDescription>
+      </Dimensions>
+      <FileLocation>D:\Users\FRET Praktikum\2021-09-28\BleachCY.lif</FileLocation>
+      <FrameCount>3 (3 channels, 1 frames)</FrameCount>
+      <FluoDescription />
+    </ImageDescription>
+  </Image>
+</Data>

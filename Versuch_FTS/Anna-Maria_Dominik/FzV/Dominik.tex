@@ -1,0 +1,200 @@
+\section{Herleitung Interferogramm einer quasimonochromatischen Welle}
+\textbf{Machen Sie sich die Herleitung der Beziehung für das Interferogramm einer quasimonochromatischen Lichtquelle klar! Mit Hilfe des Ergebnisses können Sie die Linienform der Spektrallinien bestimmen.}\\
+
+Quasimonochromatisches Licht hat im Gegensatz zu chromatischen Licht keine singuläre Wellenlänge.
+Es handelt sich Licht mit einer spektralen Intensitätsverteilung $G(k)$.
+Die vorkommenden Frequenzen in quasimonochromatischen Licht, sind eng verteilt, z.B. Gauß-förmig.\\%sind an ihrer Intensität gemessen Glockenförmig (meist Gaußförmig) verteilt.\\
+
+Um nun das Interferogramm dieser quasimonochromatischen Welle zu berechnen, muss man erst einmal die Gesamtintensität der Interferenzfunktionen berechnen:
+\begin{equation}
+    I(l)=\sum_{i=1}^n\frac{I_{0_i}}{2}\left(1+\cos(\frac{2\pi\cdot l}{\lambda_i})\right)
+\end{equation}
+Wenn wir nun den Fall $n\to\infty$ betrachten und die Intensität als Intensitätsverteilung (allgemeiner Fall) vorliegt, folgt:
+\begin{equation}
+    I(l)=\frac{I_0}{2}\int_0^\infty G(k)\left(1+\cos(k\cdot l)\right)dk
+\end{equation}
+Hierbei ist die Funktion $G(k)$ normiert: $\int_0^\infty G(k)=1$\\
+Nun kann das Interferogramm wie in der Versuchsanleitung beschrieben hergeleitete werden:
+\begin{equation}
+    I(l)-\frac{I_0}{2}=\int_{-\infty}^\infty G(k)\cos(k\cdot l)dk
+\end{equation}
+Somit entspricht das Interferogramm der Cosinus-fouriertransormation der Intensitätsverteilung.
+Diese kann man durch eine Rücktransformation bekommen und somit ist dann die Linienform der Spektrallinien bekannt:
+\begin{equation}
+    G(k)=\int_{-\infty}^\infty\left(I(l)-\frac{I_0}{2}\right)\cos(k\cdot l)dl
+\end{equation}\newpage
+\section{Natürliche Linienbreite, Doppler-/ Druckverbreiterung und ihre Unterscheidung in Fourierspektrum}
+\textbf{Was versteht man unter natürlicher Linienbreite, Doppler sowie Druckverbreiterung? Wie lassen sich im Fourierspektrum die beiden Verbreiterungsmechanismen unterscheiden?}\\
+\subsection{Natürliche Linienbreite}
+Die \textbf{natürliche Linienbreite} basiert auf der Energie-Zeit-Unschärferelation.
+Die Bestimmung der Lebensdauer und der exakten Energie eines 
+angeregten Zustandes ist nicht möglich. 
+Dies führt zu einer statischen Verbreiterung der Linienbreite.\\
+Unter Verbreiterungsmechanismen versteht man die Vergrößerung der Linienbreite
+über die natürliche Linienbreite hinaus. Hierbei unterscheidet man zwischen zwei Arten:\\
+Die \textbf{homogene Verbreiterung} tritt auf, wenn die Emissionswahrscheinlichkeit für eine bestimmte Frequenz 
+für alle Teilchen gleich groß ist. Hierzu zählen z.B. Druckverbreiterung.\\
+Die \textbf{inhomogen Verbreitung} tritt auf, wenn die Emissionswahrscheinlichkeit für eine bestimmte Frequenz 
+nicht für alle Teilchen gleich groß ist. Hierzu zählen z.B. Doppelverbreiterung.
+\subsection{Dopplerverbreiterung}
+Die Doppelverbreiterung kommt daher zustande, wenn die Atome oder Moleküle (welche das Licht abstrahlen) eine Geschwindigkeit ungleich null besitzen.
+Durch diese Bewegung ändert sich die Frequenz und somit auch die Wellenlänge des abgestrahlten Lichts, der sogenannte Dopplereffekt.\\
+Für die Verschiebung der Wellenzahl folgt:
+\begin{equation}
+    k=k_0\left(1+\frac{v}{c}\right) \Rightarrow v=\frac{k-k_0}{k_0}c
+\end{equation}
+Die Bewegung der Moleküle sind temperaturabhängig und die Geschwindigkeiten sind Bolzmann-verteilt:
+\begin{equation}
+    P(v)dv=\sqrt{\frac{\beta}{\pi}}\exp\left(-\beta v^2\right)dv
+\end{equation} 
+Mit:
+\begin{equation}
+    \beta=\frac{m}{2k_BT}
+\end{equation}
+Für die Intensitätsverteilung folgt:
+\begin{equation}
+    G(k)\sim\sqrt{\frac{\beta}{\pi}}\frac{k_0}{c}\exp\left(-\beta\left(c\frac{k-k_0}{k_0}\right)^2\right)
+\end{equation}
+Hier ist die Intensität Gauß-verteilt.\newpage
+\subsection{Druckverbreiterung}
+Bei der Druckverbreiterung wird die Linie aufgrund von Wechselwirkungen zwischen den Atomen/Molekülen verbreitert.
+Durch elastische Stöße, kommt es zu einer kurzzeitigen Verschiebung der Energieniveaus weswegen die Spektrallinie verbreitert wird.
+Hierzu wird die kinetische Gastheorie verwendet:
+\begin{equation}
+    P(t) dt=\frac{\exp(-t/\bar{t})}{\bar{t}}dt
+\end{equation}
+Hier bezeichnet $\bar{t}$ die mittlere Zeit zwischen zwei Stößen.
+Somit folgt für die Intensitätsverteilung:
+\begin{equation}
+    G(k)\sim\frac{2(tc)^{-1}}{(tc)^{-2}+\left(k-k_0\right)^2}
+\end{equation}
+Hier ist die Intensitätsverteilung Lorentz-verteilt.
+\section{Kohärenzlänge für Gauß- und Lorentzverteilung}
+\textbf{Leiten Sie die Kohärenzlänge für ein Gaußförmiges und für ein Lorentzförmiges Spektralprofil aus den jeweiligen Linienbreiten her.}
+\subsection{Gaußform}
+Hier wird zuerst eine Koordinatentransformation gemacht, um den Ursprung der Intensitätsverteilung auf $k_0$ zu legen:
+\begin{align}
+    k'&=k-k_0\\
+    H(k')&=G(k-k_0)
+\end{align}
+Somit folgt für die Doppelverbreiterte Intensitätsverteilung:
+\begin{equation}
+    H(k')=\sqrt{\frac{\beta}{\pi}}\frac{k_0}{c}\exp\left(-\beta\left(c\frac{k'}{k_0}\right)^2\right)
+\end{equation}
+Nun wird die Breite $a$ eingeführt. An dieser ist die Intensitätsverteilung auf $1/e$ der Ursprungsverteilung angefallen:
+\begin{align}
+    H(k')&=\frac{H(0)}{e}\\
+    &\Rightarrow a^2=4\frac{k_0^2}{\beta c^2}\\
+    H(k')&=\sqrt{\frac{\beta}{\pi}}\frac{k_0}{c}\exp\left(-\frac{4}{a^2}k'^2\right)
+\end{align}
+Wird nun $H(k')$ normiert, so folgt:
+\begin{equation}
+    H(k')=\frac{2}{a\sqrt{\pi}}\exp\left(-\frac{4}{a^2}k'^2\right)
+\end{equation}
+Nun folgt für das Interferogramm:
+\begin{align}
+    I(l)&=C(l)\cos\left(k_0l\right)\\
+    C(l)&=I_0\int_{-\infty}^\infty H(k')\cos(k'l)dk'\\
+    &=\Re\left\{I_0\int_{-\infty}^\infty H(k')\exp(ik'l)dk'\right\}\\
+    &=\frac{2}{a\sqrt{\pi}}\Re\left\{\int_{-\infty}^\infty \exp\left(-\left(\frac{2k'}{a}-\frac{ila}{4}\right)^2-\left(\frac{al}{4}\right)^2\right)\right\}
+\end{align}
+Mit der Substitution $z=\left(\frac{2k'}{a}-\frac{ila}{4}\right)$ folgt:
+\begin{align}
+    C(l)&=\frac{2}{a\sqrt{\pi}}I_0\exp\left(-\left(\frac{al}{4}\right)^2\right)\cdot\frac{a}{2}\underbrace{\int_{-\infty}^\infty \exp\left(-z^2\right)}_{=\sqrt{\pi}}\\
+    &=I_0\exp\left(-\frac{a^2}{16}l^2\right)\\
+    \Rightarrow I(l)&=I_0\exp\left(-\frac{a^2}{16}l^2\right)\cos\left(k_0l\right)
+\end{align}
+Die Kohärenzlänge $L$ ist die halbe Länge zwischen den Punkten, an denen $I(l)$ auf $I_0/e$ abfällt.
+Da der Cosinus symmetrisch um $k_0$ ist folgt:
+\begin{equation}
+    L_{dopp.}:=\frac{4}{a}\propto\frac{1}{\sqrt{T}}
+\end{equation}
+\subsection{Lorentzform}
+Bei der Lorentzform wird zuerst die mittlere Zeit zwischen zwei Stößen wie folgt umgeschrieben.
+Die mittlere freie Weglänge ist dabei $\bar{s}$:
+\begin{equation}
+    \bar{t}=\frac{\bar{s}}{\bar{v}}=\frac{1}{\sigma p}\sqrt{\frac{\pi m k_B T}{8}}
+\end{equation}
+Das Interferogramm erhält man durch eine fouriertransormation der Intensitätsverteilung:
+\begin{equation}
+    I(l)=I_0\exp\left(\frac{-\left|l\right|}{\bar{t}c}\right)\cos(k_0l)
+\end{equation}
+Die Kohärenzlänge $L$ ist wiederum die halbe Länge zwischen den Abfall auf $I(l)=I_0/e$:
+\begin{equation}
+    L_{druck.}=\bar{t}c\propto\frac{\bar{T}}{p}
+\end{equation}\newpage
+\section{Zusammenhang Kohärenzlänge und FWHM-Breite}
+\textbf{Wie hängt die halbe 1/e-Breite mit der vollen Halbwertsbreite FWHM einer Gauß- bzw. Lorentzförmigen Linie zusammen?}\\
+
+Die volle Halbwertsbreite ist definiert als volle Breite einer Kurve, zwischen zwei Punkten mit halber maximal Intensität.
+Für die Lorentzverteilung (Druckverbreiterung) folgt:
+\begin{equation}
+    G(k)=\frac{2(tc)^{-1}}{(tc)^{-2}+\left(k-k_0\right)^2}
+\end{equation}
+Die FWHM-Breite einer Lorentzverteilung lässt sich wie folgt berechnen \citep[vgl.]{FWHM-Lorentz}:
+\begin{align}
+    f(x)=\frac{\Gamma/2}{\left(x-\mu\right)^2+\left(\Gamma/2\right)^2}
+\end{align}
+Wobei $\Gamma$ die FWHM-Breite ist.
+Angewendet auf unsere Lorentzverteilung folgt:
+\begin{align}
+    FWHM_{druck.}&=\frac{2}{tc}=\frac{2}{L}\\
+    L&=\frac{2}{FWHM_{druck.}}
+\end{align}
+
+Für eine Gaußverteilung (Doppelverbreiterung) folgt:
+\begin{equation}
+    G(k)=\sqrt{\frac{\beta}{\pi}}\frac{k_0}{c}\exp\left(-\beta\left(c\frac{k-k_0}{k_0}\right)^2\right)
+\end{equation}
+Die FWHM-Breite einer Gaußverteilung lässt sich wie folgt bestimmen:
+\begin{align}
+    f(x)=\exp\left(-\frac{\left(x-\mu\right)^2}{2\sigma^2}\right)
+\end{align}
+Bei dieser ist die FWHM-Breite $\sqrt{8\ln(2)}\sigma$ \citep[vgl.]{FWHM-Gauss}.
+Angewendet auf unsere Gaußverteilung folgt:
+\begin{align}
+    FWHM_{dopp.}&=2\sqrt{2\ln(2)}\frac{k_0}{\sqrt{2\beta}c}=\sqrt{\ln(2)}\underbrace{2\frac{k_0}{\sqrt{\beta}c}}_{=a}=\sqrt{\ln(2)}a=\frac{4\sqrt{\ln(2)}}{L}\\
+    L&=\frac{4\sqrt{\ln(2)}}{FWHM_{dopp.}}
+\end{align}
+\section{Interferogramm zweier benachbarter Spektrallinien}
+\textbf{Berechnen Sie das Interferogramm zweier monochromatischer, dicht benachbarter Spektrallinien mit den Intensitäten $I_1$ und $I_2$ ab}\\
+
+Man betrachte zwei ebene, polarisierte Wellen:
+\begin{align}
+    E_1&=A_1\cdot\exp\left(i\phi_1\left(\vec{r},t\right)\right)\\
+    E_2&=A_2\cdot\exp\left(i\phi_2\left(\vec{r},t\right)\right)
+\end{align}
+Wenn diese Wellen nun miteinander interferieren, dann werden beide superpositioniert und für die Gesamtintensität folgt:
+\begin{align}
+    I&=\left|E_1+E_2\right|^2=\left(E_1+E_2\right)\left(E_1^*+E_2^*\right)\\
+    &=A_1^2+A_2^2+A_1A_2\cos(\delta\phi)=I_1+I_2+2\sqrt{I_1I_2}\cos(\delta\phi)
+\end{align}
+Wobei $\delta\phi$ für die Phasendifferenz steht.
+Bei Interferrenz folgt $\delta\phi=\left|\omega_2-\omega_1\right|t$.
+Somit folgt für die zeitliche Intensitätsverteilung an einem Ort:
+\begin{equation}
+    I(t)=I_1+I_2+2\sqrt{I_1I_2}\cos(\left|\omega_2-\omega_1\right|t)
+\end{equation}
+\section{Abhängigkeit des Auflösungsvermögens}
+\textbf{Zeigen Sie, dass das Auflösungsvermögen des Spektrometers vom Verfahrweg des Spiegels abhängig ist!}\\
+
+Das durch den endlichen Spiegelweg gemessenes Interferogramm $I_{obs}$ ist eine Multiplikation eines unendlich ausgedehnten Interferogramms mit einer Blendenfunktion $B(l)$.
+\begin{align}
+    I_{obs}(l)=I(l)\cdot B(l)
+\end{align}
+Diese kann einfachheitshalber als eine Rechteckblende angenommen werden.\\
+Für das gemessene Spektrum folgt:
+\begin{equation}
+    G_{obs}(k)=G(k)*b(k)
+\end{equation}
+Hierbei ist $b(k)$ die Fouriertransormierte von $B(l)$.
+Für die Rechteckblende folgt, wobei $M$ der maximale Gangunterschied ist:
+\begin{equation}
+    b(k)=2M\frac{\sin\left(kM\right)}{kM}
+\end{equation}
+Das Auflösungsvermögen ist charakterisiert durch die Halbwertsbreite von $b(k)$:
+\begin{equation}
+    \Delta k = \frac{2,4\pi}{M}\propto\frac{1}{M}
+\end{equation}
+Somit ist das Auflösungsvermögen umgekehrt proportional zu $M$ (Gangunterschied).
+Dieser hängt von dem Verfahrweg der Spiegel ab, somit ist das Auflösungsvermögens abhängig vom Verfahrweg der Spiegel.

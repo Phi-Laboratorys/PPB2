@@ -1,0 +1,32 @@
+% Leonhard Schatt
+
+\chapter{Methodik}
+
+\section{Aufbau}
+
+\subsection{Versuchsanordnung}
+
+Verwendet wird in konfokales Laser-Scanning-Mikroskop (Leica SP5 I I ) mit einer Pico Harp
+300-Einheit zur Durchführung von zeitkorrelierten Einzelphotonenmessungen. Beim Anregen verwendet man für die ersten beiden Versuchsteile einen Argon-Ionen-Laser 
+und einen gepulsten 470nm-Laser für die Lebensdauermessung. Auf dem Mikroskop befindet sich ein Öl-Immersionsobjektiv (63x Vergröÿerung, NA=1,40). Detektiert wird 
+mit einem Photomultiplier (PMT) mit variabler spektraler Selektion (\cite{FRETSkript}). 
+Genaueres kann man im angehängten Protokoll nachschlagen.
+
+\subsection{Aufnahmen der Sensitized Emission}
+
+Um FRET nachzuweisen muss man bei diesem Versuchsteil mehrere Kanäle betrachten. Dazu nimmt man Bilder in Kanal 1/2 
+bei 470-500\,nm/520-550\,nm auf und dies von einer YFP, einer CFP und einer YFP/CFP Probe. Dabei werden für jede Zelle immer drei Bilder 
+aufgenommen: Anregung und Detektion des Donor, Anregung und Detektion des Akzeptors und Anregung des Donors und Detektion des Akzeptors.
+
+
+\subsection{Donoremission nach Akzeptorbleichen}
+
+In diesem Versuchsteil werden die Proben jeweils 12 Frames gebleicht. Währenddessen wird mit Kanal 1 und 2 eine Bilderreihe 
+aufgenommen von dem Zeitraum von vor bis nach der Bleichung. Danach wird ein Areal ausgewählt (siehe Abb. \ref{bild:bleachROI}) und aus 
+diesem werden wir dann die Emissionsraten auftragen und exportieren. 
+
+\subsection{Lebensdauermessungen}
+
+Zuerst misst man an CFP und YFP die Lebenszeit, indem man mit dem gepulsten 470nm Laser bei 40 MHz anregt und dann die Zeit misst, bis ein Photon zurück kommt. 
+Wenn man die Lebensdauer dann in ein Histogramm aufträgt, kann man dies mit dem Programm fitten.\\
+Danach verfährt man ebenso bei der CFP/YFP Probe. Bei dieser nimmt man sowohl auf Kanal 1 (488-505\,nm) und 2 (535-585\,nm) auf.

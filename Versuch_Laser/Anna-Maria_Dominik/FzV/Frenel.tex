@@ -1,0 +1,22 @@
+\section{Fresnel'sche Gleichungen}
+Die Fresnel'schen Formeln beschreiben die Reflexion und Transmission einer ebenen elektromagnetischen Welle an einer Grenzschicht.
+Sie sind wie folgt definiert:
+\begin{align}
+    \left(\frac{E_T}{E_E}\right)_\perp&=\frac{2\sin(\beta)\sin(\alpha)}{\sin(\alpha+\beta)}\\
+    \left(\frac{E_R}{E_E}\right)_\perp&=-\frac{\sin(\alpha-\beta)}{\sin(\alpha+\beta)}\\
+    \left(\frac{E_T}{E_E}\right)_\parallel&=\frac{2\sin(\beta)\cos(\alpha)}{\sin(\alpha+\beta)}\\
+    \left(\frac{E_R}{E_E}\right)_\parallel&=\frac{\tan(\alpha-\beta)}{\tan(\alpha+\beta)}\\    
+\end{align}
+Sie beschreiben das Verhältnis der reflektierter $E_R$ bzw. transmittierter Feldstärke $E_T$ zu der einfallenden Feldstärke $E_E$. \newpage
+Hierbei wird zusätzlich zwischen dem senkrecht $\perp$ und dem parallel $\parallel$ polarisierten Teil (zur Einfallsebene) der Feldstärke unterschieden. 
+Bei den oben verwendeten Formeln wurde ein nicht-magnetisches Material verwendet, d.h. $\mu_1=\mu_2 = 1$.
+Der Winkel $\alpha$ ist der Einfallswinkel und der Winkel $\beta$ ist der Ausfallswinkel.\\
+Diese Darstellungsart ist nur eine von mehreren Möglichkeiten die Fresnel`schen Formeln darzustellen, man kann sie beliebig umschreiben mithilfe 
+von Additionstheoremen und Brechungsgesetzen.\\
+Ein besonderer Winkel sollte noch erwähnt werden, der sogenannte \textbf{Brewster-Winkel $\alpha_B$}. Fällt Licht unter diesen besonderen Winkel 
+ein, so wird nur der senkrecht zur Einfallsebene polarisierten Anteil reflektiert. Das reflektierte Licht ist dann linear polarisiert. Der parallel 
+zur Einfallsebene einfallende Anteil des Lichtstrahls wird transmittiert. \citep[vgl.][]{Kohler}\\
+Es gilt:
+\begin{equation}
+    \alpha_B = \arctan(\frac{n_2}{n_1})
+\end{equation}

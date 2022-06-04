@@ -1,0 +1,89 @@
+\documentclass[a4paper, twoside]{article}
+\usepackage{geometry} \geometry{top=30mm, bottom=25mm, inner=20mm, outer=20mm}
+\usepackage[linktoc=all]{hyperref}
+\hypersetup{
+	bookmarksopen=true,
+	bookmarksdepth=3,
+	colorlinks=true,
+	citecolor=blue,
+	linkcolor=[rgb]{0.6,0,0}}
+\usepackage{graphicx}
+\setlength{\abovecaptionskip}{0pt}
+\usepackage{amssymb,amsmath,physics}
+\begin{document}
+
+\title{FRET: Versuchsdruchführung}
+\author{Anna-Maria Pleyer}
+\date{\today}
+\maketitle
+\section{Bildaufnahmen am Konfokalmikroskop}
+ \begin{itemize}
+     \item Konfokalmikroskop testen
+     \item Wovon hängt die minimale Aufnahmedauer einer konfokalen Aufnahme ab?
+     \item Wie ist das Detektorsignal von den Aufnahmeparametern abhängig?
+     \item Parametereinstellungen (ohne Bleichen!)
+ \end{itemize}
+
+\section{Aufnahmen der Sensitized Emission}
+FRET Effizenz über fluoreszenzmikroskopische Aufnahmen bestimmen.\\ 
+Mithilfe der Argon-Laserlinien und Detektion über die Photomultiplier.\\
+FRET Intensität ist die Akzeptorfluoreszenz bei Donor-Anregung.\\
+Probe mit doppelten Zellen (CFP und YFP).
+\begin{itemize}
+    \item FRET Bilder aufnehmen $S_{CY}$
+    \item Aufnahmen nur von CFP $D_{CY}$
+    \item Aufnahmen nur von YFP $A_{CY}$
+    \item $D_{CY}$ mit Anregung und Detektion des Donors
+    \item $A_{CY}$ mit Anregung und Detektion des Akzeptors
+    \item $S_{CY}$ mit Anregung des Donors und Detektion des Akzeptors
+    \item mindest 10 Zellen bei gleicher Anregungsintensität
+\end{itemize}  
+Bilder für die Korrekturfaktoren\\
+CFP: 
+\begin{itemize}
+    \item NUR Zellen mit reiner CFP Makierung
+    \item $D_{CFP}$ mit Anregung und Detektion des Donors
+    \item $A_{CFP}$ mit Anregung und Detektion des Akzeptors
+    \item $S_{CFP}$ mit Anregung des Donors und Detektion des Akzeptors
+    \item mindest 10 Zellen, selbe aufnahme Parameter (wie FRET)
+\end{itemize}
+Wiederholung mit YFP:
+\begin{itemize}
+    \item NUR Zellen mit reiner YFP Makierung
+    \item $D_{YFP}$ mit Anregung und Detektion des Donors
+    \item $A_{YFP}$ mit Anregung und Detektion des Akzeptors
+    \item $S_{YFP}$ mit Anregung des Donors und Detektion des Akzeptors
+    \item mindest 10 Zellen, selbe aufnahme Parameter (wie FRET)
+\end{itemize}
+Kann man aus E den Abstand der Fluorophore berechnen? Zusätzliche Messungen?
+
+
+\section{Donoremission nach Akzeptorbleichen}
+\begin{itemize}
+    \item Parameter von bleichen bestimmen (!NUR Akzeptor bleichen; Nicht Donor!)
+    \item FRET Effizenz bestimmen VOR dem Bleichen
+    \item Akzeptormolekül Bleichen  (min. 50\% der Ursprünglichen Intensität)
+    \item FRET Effizenz bestimmen NACH Bleichen
+    \item mindest. 10 Zellen ausreichend Bilder pro Zelle
+    \item Vergleichen mit Sensitized Emission
+    \item Mögliche Nachteile/Störgrößen dieser Methode?
+\end{itemize}
+\section{Lebenszeitmessung}
+\begin{itemize}
+    \item Lebenszeiten von CFP an Zellen, die nur eine CFP Makierung aufweisen 
+    \item Lebenszeiten von YFP an Zellen, die nur eine YFP Makierung aufweisen 
+    \item Passender Filter Würfel verwenden
+    \item Lebenzeit der Donor Moleküle (YFP \textbf{und}CFP Zellen) VOR Bleichung des Akzeptormolekül
+    \item Bleichen des Akzeptormolekül
+    \item Lebenzeit der Donor Moleküle (YFP \textbf{und}CFP Zellen) NACH Bleichung des Akzeptormolekül
+    \item Vergleich der (vor und nach Bleichung) Lebenszeiten (Nur CFP, YFP und CFP)
+    \item Abschätzung der FRET Effizenz
+    \item Vergleich FRET Effizenz mit Sensitized Emission und Donoremission unter AKzeptorbelichen
+    \item Physikalisch sinnvolle Ergebnisse der Lebenszeiten
+    \item Eventuelle Abweichungen?
+    \item Vor- und Nachteile dieser Methode?
+\end{itemize}
+
+
+
+\end{document}

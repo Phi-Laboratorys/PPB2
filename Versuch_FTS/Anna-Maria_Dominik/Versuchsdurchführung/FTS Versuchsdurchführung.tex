@@ -1,0 +1,96 @@
+\documentclass[a4paper, twoside]{article}
+\usepackage{geometry} \geometry{top=30mm, bottom=25mm, inner=20mm, outer=20mm}
+\usepackage[linktoc=all]{hyperref}
+\hypersetup{
+	bookmarksopen=true,
+	bookmarksdepth=3,
+	colorlinks=true,
+	citecolor=blue,
+	linkcolor=[rgb]{0.6,0,0}}
+\usepackage{graphicx}
+\setlength{\abovecaptionskip}{0pt}
+\usepackage{amssymb,amsmath,physics}
+\begin{document}
+
+\title{FTS: Versuchsdruchführung}
+\author{Dominik Müller}
+\date{\today}
+\maketitle
+\section{Justage des Spektrometers}
+Motoren einschalten und Messprogramm starten $\to$ Spiegel fahren auf Weißlichtposition
+\subsection{Strahlengang Spektrallampen}
+\begin{itemize}
+	\item Interferometerspiegel mit Deckeln abdecken (Mitte lokalisieren)
+	\item Strahlhöhe beträgt 9,5$\,$cm
+	\item Kollimator entfernen
+	\item Justage des HeNe-Laserstrahls parallel zur Tischebene (mit Lochblende)
+	\item Kollimator wieder einbauen und justieren, dass der Strahl mittig durch die Linsen gelangt (Lochblende)
+	\item Justage der Periskop-Spiegel
+	\item Immer zuerst die \textbf{rechte} Rändelschraube (Arretierung) lösen, dann die linke zur Vertikalenverstellung benutzen
+	\item Hinter unterem Spiegel, Strahl auf 9,5$\,$cm Abstand zur Tischplatte parallel justieren
+	\item Überprüfung mit vorhandener Lehre
+	\item Strahlenteiler und Ausgleichsplatte bereits vorjustiert \textbf{Finger weg!!!}
+	\item Interferometerspiegel unabhängig voneinander (Nur eine Abdeckung abnehmen) in Autokollimation (Senkrechtes Reflektieren $\leftrightarrow|$) zur Lochblende im Kollimator justieren
+	\item Güte der Justierung am Ort des Detektros kontrollieren (Interferenzringe, keine -streifen)
+	\item Öffnung des Detektors in Zentrum der Ringe schieben, Bandpassfilter davorsetzen 
+\end{itemize}
+\subsection{Strahlengang HeNe-Laser}
+\begin{itemize}
+	\item Ein- und austretenen Strahl am Eingang des Interferometers überlagern
+	\item Dazu P1 \textbf{vorsichtig} verstellen
+	\item Mit P2 Strahl auf die Photodiode richten (voll ausleuchten)
+	\item Danach Spektrometer mit beiden schwarzen Hauben abdecken
+	\item SiPM-Detektor und beide Transimpedanzwandler einschalten
+	\item Betreuer Justage überprüfen lassen
+\end{itemize}
+\section{Messung atomarer Spektrallinien}
+Folgende Filterkomibationen verwenden!!!!!
+\begin{itemize}
+\item Na-Dampflampe: OD 1.6 / Bandpassfilter: orange
+\item He-Lampe: OD - / Bandpassfilter: orange
+\item Hg Niederdrucklampe: OD 0.3 / Bandpassfilter: grün
+\item Hg Hochdrucklampe: OD 2.0 / Bandpassfilter: grün
+\end{itemize}
+Beim Wechsel darauf achten, dass das Entladungsgefäß in der Austrittsöffnung komplett sichtbar ist. Lampe muss dazu \textbf{ausgeschaltet} sein!
+\subsection{Na-D Linie}
+Interferogramm aufnehmen:
+\begin{itemize}
+	\item Spiegel M1 verfahren
+	\item Länge von $100\,\mu$m
+	\item Vorschubgeschwindigkeit $v=1\mu$ms$^{-1}$
+\end{itemize}
+Komplette Schwebung aufnehmen:
+\begin{itemize}
+	\item Vorschubgeschwindigkeit $v=5\mu$ms$^{-1}$
+\end{itemize}
+Einhüllende aufnehmen:
+\begin{itemize}
+	\item Spiegel M2 verfahren
+	\item $v=100\mu$ms$^{-1}$
+\end{itemize}
+\subsection{He-Linie}
+Interferogramm aufnehmen:
+\begin{itemize}
+	\item Spiegel M1 verfahren
+	\item Länge von $100\,\mu$m
+	\item Vorschubgeschwindigkeit $v=1\mu$ms$^{-1}$
+\end{itemize}
+Einhüllende aufnehmen:
+\begin{itemize}
+	\item Spiegel M2 verfahren
+	\item $v=100\mu$ms$^{-1}$
+\end{itemize}
+\section{Auswertung}
+\subsection{Na-D Linie, Hg-Linie}
+\begin{itemize}
+\item Ermitteln Sie aus der Einhüllenden Na-Dupletts den Korrekturfaktor fur Motor M2.
+\item Bestimmen Sie die Wellenlänge, die Kohärenzlänge und die Linienbreite der Linie.
+\item Bestimmen Sie das Intensitätsverhältnis und Abstand der beiden Natrium-D Linien. Aus welcher Messung erhält man dafür die genauesten Messwerte?
+\item Welcher Verbreiterungsmechanismus liegt bei dieser Lampe vor?
+\end{itemize}
+\subsection{He-Linie, Hg-Linie}
+\begin{itemize}
+\item Bestimmen Sie die Wellenlänge, die Kohärenzlänge und die Linienbreite der Linie.
+\item Welcher Verbreiterungsmechanismus liegt bei dieser Lampe vor?
+\end{itemize}
+\end{document}

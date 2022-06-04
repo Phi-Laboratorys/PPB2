@@ -1,0 +1,109 @@
+% Dokumentenklasse und Packages
+% Die folgenden Zeilen sollen möglichst nicht verändert werden
+\documentclass[paper=a4,bibliography=totoc,BCOR=10mm,twoside,numbers=noenddot,fontsize=11pt]{scrreprt}
+\usepackage[ngerman]{babel}
+\usepackage[cp1252,utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{subfigure}
+%\usepackage[dvipdfmx]{graphicx}
+\usepackage{nicefrac}
+\usepackage{fancyvrb}
+\usepackage{amsmath,amssymb,amstext}
+%\usepackage{siunitx}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{natbib}
+\usepackage{microtype}
+%\usepackage[format=plain]{caption}
+% Hier können weitere Packages angefügt werden
+%\usepackage{textpos}
+\usepackage{geometry} \geometry{top=30mm, bottom=25mm, inner=20mm, outer=20mm}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+
+
+% Abschnittseinrückung und -abstand
+% Die folgenden Zeilen sollen möglichst nicht verändert werden
+\parindent 0.0cm
+\parskip 0.8ex plus 0.5ex minus 0.5ex
+
+% Anzahl und Größe von Gleitobjekten
+% maximal 2 Objekte oben und unten
+% erlaubt auch größere Bilder, welche die ganze Seite benötigen
+% Die folgenden Zeilen sollen möglichst nicht verändert werden
+\setcounter{bottomnumber}{2}
+\setcounter{topnumber}{2}
+\renewcommand{\bottomfraction}{1.}
+\renewcommand{\topfraction}{1.}
+\renewcommand{\textfraction}{0.}
+
+%\sc und \bc veraltet. Daher: (20.09.2018)
+\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\DeclareOldFontCommand{\bf}{\normalfont\scshape}{\textbf}
+
+% Verschiedenes
+\pagestyle{headings}          % Der Seitenstil sollte möglichst nicht verändert werden
+\graphicspath{{./bilder/}}    % Der Pfad für die Abbildungen Abbildungen wird gesetzt
+%\VerbatimFootnotes            % \verb etc. auch in \footnotes möglich
+
+%----------------------------------------- Variablen -----------------------------------------
+
+\newcommand{\Versuchstitel}{Versuch LASER} 
+\newcommand{\Versuchsuntertitel}{Eigenschaften der Strahlung und ihre Anwendung}
+\newcommand{\Versuchsdatum}{13.09.2021}
+\newcommand{\Semester}{Wintersemester 2021/2022}
+\newcommand{\Betreuer}{Dr. Lisa Günther}
+\newcommand{\Bild}{Titelseite/logoUniPDF.pdf}
+
+\newcommand{\Gruppennummer}{6}
+\newcommand{\Auswerteperson}{Anna-Maria Pleyer}
+\newcommand{\Mesperson}{$\cdot$}
+\newcommand{\Protokollperson}{Dominik Müller}
+
+
+% ----------------------------- Beginn des Dokumentes ----------------------------------------
+%
+\begin{document}
+\nonfrenchspacing             % Zusätzlicher kleiner Zwischenraum am Satzende; macht den Text netter lesbar.
+
+%Titelseite
+\input{Titelseite/Titelseite.tex}
+\cleardoublepage
+
+%Inhaltsverzeichnis
+\tableofcontents
+\cleardoublepage
+
+%Einleitung
+\input{Einleitung/Einleitung.tex}
+
+%Fragen zur Vorbereitung
+%\input{FzV/FragenZurVorbereitung.tex}
+\input{FzV/FzV2.tex}
+
+%Versuchsaufbau
+\input{Versuchsdurchfuehrung/Versuchsaufbau.tex}
+%Auswertung
+\input{Auswertung/Auswertung.tex}
+
+%Fazit
+\input{Fazit/Fazit.tex}
+\appendix
+%Messprotokoll
+\input{Protokoll_Messung/Protokoll.tex}
+\input{Anhang/Fehler.tex}
+
+%Literatur
+\cleardoublepage
+\bibliography{Literatur/Literatur}
+\bibliographystyle{Literatur/LAuswertung}
+
+%\newpage
+%\listoffigures
+
+\end{document}
+%
+% ------------------------------ Ende des Dokumentes -----------------------------------------

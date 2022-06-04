@@ -1,0 +1,118 @@
+%Matteo Kumar - Leonard Schatt
+% Fortgeschrittenes Physikalisches Praktikum
+% 0. Cover
+% Noch abänderbar nur ein Vorschlag
+\newgeometry{top=30mm, bottom=20mm, inner=20mm, outer=20mm}
+\thispagestyle{empty}
+
+% Colors
+\definecolor{Notablue}{HTML}{3498DB}		%Theoretische Physik
+\definecolor{Notared}{HTML}{CF366C}			%Mathematik
+\definecolor{Notagreen}{HTML}{19B092}		%Experimentalphysik
+\definecolor{Notaorange}{HTML}{FA9D00}		%Chemie/Wahlfach nicht physikalisch
+\definecolor{Notagrey}{HTML}{969696}		%Praktikum
+\definecolor{Notalavendel}{HTML}{9DBBD8}	%Wahlfächer physikalisch
+
+% Boolean by default false
+\newboolean{twoRows}
+\newboolean{symbol}
+
+% Funktions
+\makeatletter
+   \def\vhrulefill#1{\leavevmode\leaders\hrule\@height#1\hfill \kern\z@}
+\makeatother
+\newcommand*\ruleline[1]{\par\noindent\raisebox{.8ex}{\makebox[\linewidth]{\vhrulefill{\linethickness}\hspace{1ex}\raisebox{-.8ex}{#1}\hspace{1ex}\vhrulefill{\linethickness}}}}
+
+% Variables
+\def\schriftgrosse{70}
+\def\linethickness{1,5pt}
+
+\def\farbe{Notagrey}
+\def\fach{PPB2}
+\def\name{Matteo Kumar - Leonhard Schatt}
+\def\uberschrift{FRET} % Absatz mit \\[0,5cm]; u = Übung, k = Klausur; s = Skript, e = Ergebnis
+\def\bottom{WS2021}
+\def\datum{27.09.2021}
+\def\platz{NW I    }
+\def\betreuer{Chenyu Jin}
+\def\groupnr{3}
+
+\begin{titlepage}
+			
+	\centering
+	{\LARGE \sffamily {\textbf{\bottom}\par}}
+	\vspace{2,5cm}
+    {\fontsize{40}{0}\sffamily\ruleline{\textcolor{\farbe}{\textbf{\fach}}}\par}
+    \vspace{6cm}
+	{\Large\sffamily \ruleline{\name}\par}
+	
+	
+	% Choose Text
+	\ifthenelse{\equal{\uberschrift}{s}} {\def\titel{Skript}}	
+		{\ifthenelse{\equal{\uberschrift}{k}} {\def\titel{Klausur}}
+			{\ifthenelse{\equal{\uberschrift}{u}} {\def\titel{Übung}}
+				{\ifthenelse{\equal{\uberschrift}{e}} {\def\titel{Klausur \\[0,5cm] Ergebnis}}
+					{\def\titel{\uberschrift}}
+				}
+			}
+		}
+	
+	\begin{textblock*}{21cm}(0cm,9cm) % {block width} (coords), centered		
+		{\fontsize{\schriftgrosse}{0}\sffamily\textcolor{\farbe}{\textbf{\titel}}\par}
+	\end{textblock*}
+	
+	% Choose Logo
+	\ifthenelse {\equal{\farbe}{Notared}} {\def\logo{Bilder/Logo/UniBTNotared}}
+		{\ifthenelse {\equal{\farbe}{Notagreen}} {\def\logo{Bilder/Logo/UniBTNotagreen}}
+			{\ifthenelse {\equal{\farbe}{Notablue}} {\def\logo{Bilder/Logo/UniBTNotablue}}
+				{\ifthenelse {\equal{\farbe}{Notaorange}} {\def\logo{Bilder/Logo/UniBTNotaorange}}
+					{\ifthenelse {\equal{\farbe}{Notagrey}} {\def\logo{Bilder/Logo/UniBTNotagrey}}
+						{\ifthenelse {\equal{\farbe}{Notalavendel}} {\def\logo{Bilder/Logo/UniBTNotalavendel}}	
+							{\ifthenelse {\equal{\farbe}{black}} {\def\logo{Bilder/Logo/UniBT}}	
+								{\def\logo{noLogo}}
+							}
+						}
+					}
+				}
+			}
+		}	
+
+	\IfSubStr{\logo}{noLogo}{\setboolean{symbol}{false}}{\setboolean{symbol}{true}}
+	
+	% Gruppe
+	\vspace{10cm}
+	{\large\sffamily{Gruppe \groupnr}}
+	
+	%Logo
+	\vfill
+
+	\ifthenelse{\boolean{symbol}}
+		{
+			\begin{figure}[h]
+			\begin{center}
+				
+				\includegraphics[width=2cm]{\logo}
+				
+			\end{center}
+			\end{figure}
+		}
+	
+\end{titlepage}
+
+\restoregeometry
+
+% Information
+\chapter*{Informationen}
+\label{chap:info}
+
+\begin{tabular}{l l}
+
+	{\textbf{Versuchstag}} \hspace{1cm} & \hspace{1cm} {\datum}\\[0,2cm]
+	{\textbf{Versuchsplatz}} \hspace{1cm} & \hspace{1cm} {\platz}\\[0,2cm]
+	{\textbf{Betreuer}} \hspace{1cm} & \hspace{1cm} {\betreuer}\\[1,2cm]
+	{\textbf{Gruppen Nr.}} \hspace{1cm} & \hspace{1cm} {\groupnr}\\[0.2cm]
+%	{\textbf{Auswertperson}} \hspace{1cm} & \hspace{1cm} {\auswertp}\\[0.2cm]
+%	{\textbf{Messperson}} \hspace{1cm} & \hspace{1cm} {\messp}\\[0.2cm]
+%	{\textbf{Protokollperson}} \hspace{1cm} & \hspace{1cm} {\protop}\\[0.2cm]
+
+\end{tabular}
